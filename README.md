@@ -2,14 +2,6 @@
 
 - This repo is for curating datasets related to Malaysia from multiple domain such as Tabular, Image, Text and Audio.
 
-## Tabular
-
-1. a
-
-## Image
-
-1. b
-
 ## Text
 
 1. [huseinzol05/malay-dataset](https://github.com/huseinzol05/malay-dataset), gather Bahasa Malaysia corpus.

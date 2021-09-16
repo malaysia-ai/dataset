@@ -10,4 +10,4 @@
 ## Audio
 
 1. [GoogleTTS](audio/googleTTS/)
-2. [huseinzol05/malaya-speech/data](https://github.com/huseinzol05/malaya-speech/tree/master/data), gather Bahasa Malaysia speeches.
+2. [huseinzol05/malaya-speech/data](https://github.com/huseinzol05/malaya-speech/tree/master/data), gather Bahasa Malaysia speech.

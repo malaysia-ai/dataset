@@ -1,4 +1,4 @@
-## Collection of datasets used by Malaysia AI
+## Collection of dataset used by Malaysia AI
 
 - This repo is for curating dataset related to Malaysia from multiple domain such as Tabular, Image, Text and Audio.
 

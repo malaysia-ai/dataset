@@ -61,8 +61,10 @@ def main(model_name, input_file, folder, global_index, index, retry, threshold, 
     vocoder = load_vocoder(device = device)
 
     folder_fail = folder + '-failed'
+    folder_force_alignment = folder + '-alignment_alignment'
     os.makedirs(folder, exist_ok = True)
     os.makedirs(folder_fail, exist_ok = True)
+    os.makedirs(folder_force_alignment, exist_ok = True)
 
     with open(input_file) as fopen:
         instructions = json.load(fopen)
@@ -76,6 +78,8 @@ def main(model_name, input_file, folder, global_index, index, retry, threshold, 
         failed_filename = os.path.join(folder_fail, f'{i}.mp3')
         if os.path.exists(failed_filename):
             continue
+
+        new_filename_force_alignment = os.path.join(folder_force_alignment, f'{i}.json')
 
         voice = instructions[i]['speaker']['audio']
         original_text = instructions[i]['speaker']['transcription']
@@ -166,6 +170,8 @@ def main(model_name, input_file, folder, global_index, index, retry, threshold, 
                 if not len(scores):
                     a = new_wav.cpu().numpy()
                     sf.write(new_filename, a, 24000)
+                    with open(new_filename_force_alignment, 'w') as fopen:
+                        json.dump(word_timestamps, fopen)
                     failed = False
                     break
         

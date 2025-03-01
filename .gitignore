@@ -172,3 +172,6 @@ cython_debug/
 mp.py
 *Untitled*.ipynb
 malaysian_sft.py
+speech-instructions-extra/*audio
+speech-instructions-extra/*-Train
+*.parquet

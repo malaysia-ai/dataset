@@ -23,7 +23,7 @@ done
 for i in {0..3}; do
   screen -S "tatabahasa_$i" -X quit 2>/dev/null
   screen -dmS "tatabahasa_$i" bash -c "cd /home/husein/ssd3/dataset/speech-instructions && \
-  CUDA_VISIBLE_DEVICES=0 \
+  CUDA_VISIBLE_DEVICES=2 \
   python3.10 generate.py \
     --input_file \"tatabahasa.json\" \
     --folder \"tatabahasa-v2\" \
@@ -32,12 +32,12 @@ for i in {0..3}; do
 done
 
 for i in {0..3}; do
-  screen -S "mallm_$i" -X quit 2>/dev/null
-  screen -dmS "mallm_$i" bash -c "cd /home/husein/ssd3/dataset/speech-instructions && \
-  CUDA_VISIBLE_DEVICES=1 \
+  screen -S "malaymmlu_$i" -X quit 2>/dev/null
+  screen -dmS "malaymmlu_$i" bash -c "cd /home/husein/ssd3/dataset/speech-instructions && \
+  CUDA_VISIBLE_DEVICES=2 \
   python3.10 generate.py \
-    --input_file \"mallm.json\" \
-    --folder \"mallm-v2\" \
+    --input_file \"malaymmlu.json\" \
+    --folder \"malaymmlu\" \
     --global_index 4 \
     --index $i --threshold -9 --maxlen 300 --retry 10"
 done

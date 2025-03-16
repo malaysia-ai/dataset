@@ -3,6 +3,8 @@ from collections import defaultdict
 from tqdm import tqdm
 from glob import glob
 from datasets import Audio
+from torch.utils.data import Dataset
+from torch.utils.data import DataLoader
 import torch
 import torchaudio
 import numpy as np
@@ -49,8 +51,15 @@ def function(path, global_index, local_index, stride, sliding, model):
     filtered_files = filtered_files[global_size * local_index: global_size * (local_index + 1)]
     files = filtered_files
 
-    with torch.no_grad():
-        for f in tqdm(files):
+    class CustomDataset(Dataset):
+        def __init__(self, files):
+            self.files = files
+
+        def __len__(self):
+            return len(self.files)
+        
+        def __getitem__(self, index):
+            f = self.files[index]
             y = audio.decode_example(audio.encode_example(f))['array']
             timestamps = []
             slided = []
@@ -63,13 +72,26 @@ def function(path, global_index, local_index, stride, sliding, model):
 
             if last_end < len(y):
                 y_ = y[last_end:]
-                if len(y_) > 1000:
+                if len(y_) >= stride:
                     slided.append(y_)
                     timestamps.append((last_end / sr, len(y) / sr))
             
             inputs = feature_extractor(slided, sampling_rate=sr, 
-                           return_tensors="pt", return_attention_mask = True)
-            inputs['input_values'] = inputs['input_values'].to(torch.float16).cuda()
+                            return_tensors="pt", return_attention_mask = True)
+            return inputs, f, timestamps
+
+    dataset = CustomDataset(files)
+    dataloader = DataLoader(dataset, batch_size = 1, shuffle = False, prefetch_factor=10, num_workers=5)
+
+    with torch.no_grad():
+        for row in tqdm(iter(dataloader)):
+            inputs, f, timestamps_ = row
+            f = f[0]
+            timestamps = []
+            for t in timestamps_:
+                timestamps.append((float(t[0]), float(t[1])))
+
+            inputs['input_values'] = inputs['input_values'][0].to(torch.float16).cuda()
             logits = model(inputs['input_values']).logits.cpu().numpy()
             logits_per_timestamp = {t: logits[no] for no, (t, _) in enumerate(timestamps)}
             logits_accumulator = defaultdict(lambda: np.zeros(logits.shape[1]))

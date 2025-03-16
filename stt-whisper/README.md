@@ -5,6 +5,19 @@
 - [Speech Instructions](https://huggingface.co/datasets/malaysia-ai/Speech-Instructions).
 2. Synthetic merging different context, [synthetic-context-switching-word-timestamp.ipynb](synthetic-context-switching-word-timestamp.ipynb).
 
+## Sliding Audionet
+
+```bash
+CUDA_VISIBLE_DEVICES=0 \
+python3 audioset_sliding.py --file 'prepared-pseudolabel.jsonl' --global-index 4 --local-index 0
+CUDA_VISIBLE_DEVICES=1 \
+python3 audioset_sliding.py --file 'prepared-pseudolabel.jsonl' --global-index 4 --local-index 1
+CUDA_VISIBLE_DEVICES=2 \
+python3 audioset_sliding.py --file 'prepared-pseudolabel.jsonl' --global-index 4 --local-index 2
+CUDA_VISIBLE_DEVICES=3 \
+python3 audioset_sliding.py --file 'prepared-pseudolabel.jsonl' --global-index 4 --local-index 3
+```
+
 ## Speech Instructions
 
 1. Run force alignment,

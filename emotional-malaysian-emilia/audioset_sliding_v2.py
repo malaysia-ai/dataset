@@ -25,8 +25,8 @@ def new_path(f):
 @click.option("--path", help="files path in glob pattern")
 @click.option("--global-index", default=1, help="global index")
 @click.option("--local-index", default=0, help="local index")
-@click.option("--stride", default=0.25)
-@click.option("--sliding", default=0.75)
+@click.option("--stride", default=0.1)
+@click.option("--sliding", default=1.0)
 @click.option("--model", default='MIT/ast-finetuned-audioset-10-10-0.4593')
 def function(path, global_index, local_index, stride, sliding, model):
 
@@ -106,27 +106,12 @@ def function(path, global_index, local_index, stride, sliding, model):
             for k in averaged_logits.keys():
                 averaged_logits[k] = [round(v_, 5) for v_ in averaged_logits[k]]
 
-            combined, temp, temp_timestamp = [], [], []
+            combined = []
             for k, v in averaged_logits.items():
-                a = np.argmax(v)
-                if a != 0:
-                    temp.append(v)
-                    temp_timestamp.append(k)
-                else:
-                    if len(temp):
-                        a = np.array(temp).tolist()
-                        for n in range(len(a)):
-                            for m in range(len(a[n])):
-                                a[n][m] = round(a[n][m], 4)
-                        combined.append((a, temp_timestamp))
-                        temp, temp_timestamp = [], []
-                        
-            if len(temp):
-                a = np.array(temp).tolist()
-                for n in range(len(a)):
-                    for m in range(len(a[n])):
-                        a[n][m] = round(a[n][m], 4)
-                combined.append((a, temp_timestamp))
+                topk = np.array(v).argsort()[-5:][::-1]
+                scores = [float(v[i]) for i in topk]
+                topk = [id2label[i] for i in topk]
+                combined.append({'timestamp': k, 'topk': topk, 'scores': scores})
 
             splitted = new_path(f)
             os.makedirs(os.path.split(splitted)[0], exist_ok = True)

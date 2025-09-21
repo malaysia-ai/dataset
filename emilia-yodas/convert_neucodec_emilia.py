@@ -26,16 +26,6 @@ def chunks(l, devices):
         yield (l[start:end], devices[i])
         start = end
         
-def chunks(l, devices):
-    chunk_size = len(l) // len(devices)
-    remainder = len(l) % len(devices)
-    start = 0
-    for i in range(len(devices)):
-        extra = 1 if i < remainder else 0
-        end = start + chunk_size + extra
-        yield (l[start:end], devices[i])
-        start = end
-
 def new_path(f):
     splitted = f.split('/')
     folder = f.split('/')[0]
@@ -98,8 +88,7 @@ def loop(
         try:
             y, sr = librosa.load(f, sr = 16000)
             wav_tensor = torch.from_numpy(y).float().unsqueeze(0)
-            input_waveform = wav_tensor
-            fsq_codes = model.encode_code(input_waveform.unsqueeze(1))
+            fsq_codes = model.encode_code(wav_tensor.unsqueeze(1))
             tokens = fsq_codes[0, 0].tolist()
 
             os.makedirs(os.path.split(filename)[0], exist_ok = True)

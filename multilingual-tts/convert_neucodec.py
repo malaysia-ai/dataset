@@ -7,7 +7,6 @@ import soundfile as sf
 import json
 import click
 import re
-import pandas as pd
 import librosa
 from glob import glob
 from functools import partial

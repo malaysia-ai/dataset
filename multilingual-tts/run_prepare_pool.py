@@ -36,6 +36,51 @@ def split_gpus(gpus, n):
     return [b for b in out if b]  # drop empty buckets if n > len(gpus)
 
 
+def gpu_free_mb(ids):
+    """{gpu_id: free_MiB} for the given gpu ids, via nvidia-smi (co-tenant aware)."""
+    try:
+        out = subprocess.check_output(
+            ["nvidia-smi", "--query-gpu=index,memory.free",
+             "--format=csv,noheader,nounits"], text=True, timeout=30)
+    except Exception:
+        return {}
+    free = {}
+    for line in out.strip().splitlines():
+        parts = [x.strip() for x in line.split(",")]
+        if len(parts) == 2 and parts[0] in ids:
+            try:
+                free[parts[0]] = int(parts[1])
+            except ValueError:
+                pass
+    return free
+
+
+def record_failure(workdir, name, repo, gpu, rc, timed_out, logpath):
+    """Append a failure record to <workdir>/failures.jsonl for later reprocessing,
+    flagging OOM specifically."""
+    reason, oom = "unknown", False
+    try:
+        tail = open(logpath, errors="ignore").read()[-6000:]
+        low = tail.lower()
+        oom = ("out of memory" in low) or ("cufft_internal" in low) or ("cuda error" in low)
+        fl = [l for l in tail.splitlines() if l.startswith("[fail]")]
+        if fl:
+            reason = fl[-1][:200]
+        elif timed_out:
+            reason = "timeout"
+        elif oom:
+            reason = "oom"
+    except Exception:
+        pass
+    rec = {"name": name, "repo": repo, "gpu": gpu, "rc": rc,
+           "timed_out": timed_out, "oom": oom, "reason": reason, "t": time.time()}
+    try:
+        with open(os.path.join(workdir, "failures.jsonl"), "a") as f:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
+
+
 @click.command()
 @click.option("--list", "list_file", required=True, help="tasks json [{repo,name}]")
 @click.option("--workers", default=5, type=int)
@@ -46,16 +91,19 @@ def split_gpus(gpus, n):
 @click.option("--cluster-threshold", default=0.1, type=float)
 @click.option("--job-timeout", default=5400, type=int,
               help="kill a single dataset job after this many seconds (hang guard)")
+@click.option("--min-free-gb", default=30.0, type=float,
+              help="only schedule a job onto a GPU with at least this much free VRAM")
 def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshold,
-         job_timeout):
+         job_timeout, min_free_gb):
     if gpus is None:
         import torch
         gpus = [str(i) for i in range(torch.cuda.device_count())]
     else:
         gpus = [g.strip() for g in gpus.split(",") if g.strip()]
-    workers = min(workers, len(gpus))
-    buckets = split_gpus(gpus, workers)
-    print(f"[pool] {workers} workers, gpu buckets: {buckets}")
+    max_concurrent = min(workers, len(gpus)) if workers else len(gpus)
+    min_free_mb = int(min_free_gb * 1024)
+    print(f"[pool] up to {max_concurrent} concurrent | candidate gpus={gpus} | "
+          f"min_free={min_free_gb}GB | DYNAMIC gpu assignment (co-tenant aware)")
 
     tasks = json.load(open(list_file))
     if limit:
@@ -75,13 +123,13 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
         queue.append((repo, name))
     print(f"[pool] {len(queue)} to process, {skipped} already done")
 
-    free = list(buckets)
-    running = {}   # popen -> (bucket, name, t0, logpath)
+    busy = set()   # gpu ids currently assigned to one of my running jobs
+    running = {}   # popen -> (gpu, name, t0, logpath, lf)
     done = failed = 0
     total = len(queue)
 
-    def launch(repo, name, bucket):
-        env = dict(os.environ, CUDA_VISIBLE_DEVICES=",".join(bucket))
+    def launch(repo, name, gpu):
+        env = dict(os.environ, CUDA_VISIBLE_DEVICES=gpu)
         cmd = [sys.executable, os.path.join(HERE, "prepare.py"),
                "--repo", repo, "--name", name, "--workdir", workdir,
                "--cluster-threshold", str(cluster_threshold)]
@@ -92,15 +140,26 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
         # own session/process-group so a timeout can kill the whole job tree
         p = subprocess.Popen(cmd, env=env, stdout=lf, stderr=subprocess.STDOUT,
                              start_new_session=True)
-        running[p] = (bucket, name, time.time(), logpath, lf)
-        print(f"[pool] START {name}  gpus={','.join(bucket)}  (repo={repo})")
+        running[p] = (gpu, name, time.time(), logpath, lf, repo)
+        busy.add(gpu)
+        print(f"[pool] START {name}  gpu={gpu}  (repo={repo})")
+
+    def pick_gpu():
+        """A GPU not already running my job, with >= min_free_mb free now."""
+        free = gpu_free_mb(gpus)
+        cand = sorted(((mb, g) for g, mb in free.items()
+                       if g not in busy and mb >= min_free_mb), reverse=True)
+        return cand[0][1] if cand else None
 
     while queue or running:
-        while queue and free:
+        while queue and len(running) < max_concurrent:
+            gpu = pick_gpu()
+            if gpu is None:
+                break  # no GPU free enough right now; try again next tick
             repo, name = queue.popleft()
-            launch(repo, name, free.pop())
+            launch(repo, name, gpu)
         for p in list(running):
-            bucket, name, t0, logpath, lf = running[p]
+            gpu, name, t0, logpath, lf, repo = running[p]
             rc = p.poll()
             timed_out = False
             if rc is None:
@@ -117,7 +176,7 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
                     pass
             running.pop(p)
             lf.close()
-            free.append(bucket)
+            busy.discard(gpu)
             ok = os.path.exists(os.path.join(ckpt, f"{name}.done"))
             done += ok
             failed += (not ok)
@@ -127,7 +186,8 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
                   f"[{done} ok / {failed} fail / {total} total]")
             if not ok:
                 print(f"       see {logpath}")
-        time.sleep(2)
+                record_failure(workdir, name, repo, gpu, p.returncode, timed_out, logpath)
+        time.sleep(3)
 
     print(f"[pool] FINISHED: {done} ok, {failed} failed of {total}")
 

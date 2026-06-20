@@ -61,6 +61,23 @@ python3 prepare.py --repo <owner/name> --name <config> --workdir /share \
   exit codes are ignored (interpreter-teardown GIL races on this box) — success is
   judged by output file counts.
 
+### Parallel batch — `run_prepare_pool.py`
+
+Run many datasets at once without oversubscribing GPUs:
+```bash
+python3 -u run_prepare_pool.py --list tasks.json --workers 5 \
+    --gpus 0,1,2,3,4,5,6,7 --workdir /share [--limit N] [--max-samples M]
+# tasks.json: [{"repo":"owner/name","name":"ConfigName"}, ...]  (name optional)
+```
+- Splits the GPUs into `workers` disjoint slices (5 workers on 8 GPUs ->
+  `[0,1][2,3][4,5][6][7]`) passed as `CUDA_VISIBLE_DEVICES` to each `prepare.py`.
+- Dynamic queue: a freed slice goes to the next dataset immediately. Skips
+  checkpointed datasets; per-dataset auto-cleanup keeps peak disk ≈ jobs in flight.
+- Per-dataset logs in `<workdir>/logs/<name>.log`. Run the pool itself with
+  `python -u` (its own progress log is otherwise stdout-buffered).
+- Validated: 5 datasets (km/tw/ko/es/ko-ja) concurrently -> 5 ok / 0 fail, each
+  with parquet + audio zip + neucodec zip on HF.
+
 ### Remote run (GPU box)
 
 `ssh -i scicom -p 1024 root@8.222.165.68`, work in `/share` (8× H20). Deps that

@@ -77,7 +77,13 @@ def decode_audio(a):
     return None, None
 
 
-def stage_extract(repo, config, name, audio_col, text_col, speaker_col, max_samples):
+def free_gb(path="."):
+    import shutil
+    return shutil.disk_usage(path).free / 1e9
+
+
+def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
+                  max_samples, min_free_gb=50):
     """Stream source -> mp3 + rows json. Resumable via <name>.rows.json."""
     import soundfile as sf
     from datasets import load_dataset, get_dataset_split_names, load_dataset_builder
@@ -128,6 +134,9 @@ def stage_extract(repo, config, name, audio_col, text_col, speaker_col, max_samp
                 idx += 1
                 if idx % 500 == 0:
                     print(f"[extract] {idx} clips...")
+                    if free_gb() < min_free_gb:
+                        raise SystemExit(f"low disk (<{min_free_gb}GB free) at {idx} "
+                                         f"clips; aborting {name} to protect the batch")
                 if max_samples and idx >= max_samples:
                     break
             except Exception as e:
@@ -277,27 +286,33 @@ def main(repo, name, config, audio_col, text_col, speaker_col, max_samples,
         return
 
     t0 = time.time()
-    if config is None:
-        from datasets import get_dataset_config_names
-        cfgs = get_dataset_config_names(repo)
-        config = cfgs[0] if cfgs else "default"
-        print(f"[config] using '{config}' of {cfgs}")
+    try:
+        if config is None:
+            from datasets import get_dataset_config_names
+            cfgs = get_dataset_config_names(repo)
+            config = cfgs[0] if cfgs else "default"
+            print(f"[config] using '{config}' of {cfgs}")
 
-    rows, speaker_col = stage_extract(repo, config, name, audio_col, text_col,
-                                      speaker_col, max_samples)
-    if not rows:
-        raise SystemExit("no rows extracted")
-    rows = stage_speaker(name, rows, speaker_col, threshold=cluster_threshold)
-    stage_neucodec(name, len(rows))
-    stage_push(name, rows, repo, config)
+        rows, speaker_col = stage_extract(repo, config, name, audio_col, text_col,
+                                          speaker_col, max_samples)
+        if not rows:
+            raise SystemExit("no rows extracted")
+        rows = stage_speaker(name, rows, speaker_col, threshold=cluster_threshold)
+        stage_neucodec(name, len(rows))
+        stage_push(name, rows, repo, config)
 
-    json.dump({"repo": repo, "config": config, "name": name, "rows": len(rows),
-               "speakers": len({r["speaker"] for r in rows}),
-               "seconds": round(time.time() - t0, 1)},
-              open(done, "w"), indent=2)
-    print(f"[done] {name}: {len(rows)} rows in {time.time()-t0:.0f}s -> checkpoint {done}")
-    if not keep_local:
-        stage_cleanup(name)
+        json.dump({"repo": repo, "config": config, "name": name, "rows": len(rows),
+                   "speakers": len({r["speaker"] for r in rows}),
+                   "seconds": round(time.time() - t0, 1)},
+                  open(done, "w"), indent=2)
+        print(f"[done] {name}: {len(rows)} rows in {time.time()-t0:.0f}s -> checkpoint {done}")
+        if not keep_local:
+            stage_cleanup(name)
+    except BaseException as e:
+        print(f"[fail] {name}: {type(e).__name__}: {str(e)[:200]}")
+        if not keep_local:
+            stage_cleanup(name)  # don't leave partial artifacts on disk
+        raise
 
 
 if __name__ == "__main__":

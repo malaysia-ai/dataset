@@ -65,16 +65,31 @@ def detect_cols(features, audio_col, text_col, speaker_col):
 
 def decode_audio(a):
     import soundfile as sf
+    data = None
     if isinstance(a, dict):
         if a.get("array") is not None:
             return np.asarray(a["array"], dtype="float32"), int(a["sampling_rate"])
         if a.get("bytes"):
-            arr, sr = sf.read(io.BytesIO(a["bytes"]))
-            return arr.astype("float32"), sr
-        if a.get("path") and isinstance(a["path"], str) and os.path.exists(a["path"]):
-            arr, sr = sf.read(a["path"])
-            return arr.astype("float32"), sr
-    return None, None
+            data = a["bytes"]
+        elif a.get("path") and isinstance(a["path"], str) and os.path.exists(a["path"]):
+            data = open(a["path"], "rb").read()
+    elif isinstance(a, (bytes, bytearray)):
+        data = bytes(a)
+    if not data:
+        return None, None
+    try:
+        arr, sr = sf.read(io.BytesIO(data))
+        return arr.astype("float32"), sr
+    except Exception:
+        pass
+    try:  # fallback for codecs libsndfile can't read (m4a/aac/webm) via audioread
+        import librosa
+        arr, sr = librosa.load(io.BytesIO(data), sr=None, mono=False)
+        if getattr(arr, "ndim", 1) > 1:
+            arr = arr.T  # (ch, n) -> (n, ch) for downstream mean(axis=1)
+        return np.asarray(arr, dtype="float32"), int(sr)
+    except Exception:
+        return None, None
 
 
 def free_gb(path="."):
@@ -86,7 +101,8 @@ def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
                   max_samples, min_free_gb=50):
     """Stream source -> mp3 + rows json. Resumable via <name>.rows.json."""
     import soundfile as sf
-    from datasets import load_dataset, get_dataset_split_names, load_dataset_builder
+    from datasets import (load_dataset, get_dataset_split_names,
+                          load_dataset_builder, Audio)
 
     rows_json = f"{name}.rows.json"
     audio_list_json = f"{name}-audio.json"
@@ -112,7 +128,21 @@ def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
     rows, idx = [], 0
     for split in splits:
         ds = load_dataset(repo, config, split=split, streaming=True)
-        for ex in ds:
+        # don't let datasets auto-decode audio during iteration: one malformed
+        # clip would crash the whole stream. Get raw bytes, decode per-row below.
+        try:
+            ds = ds.cast_column(audio_col, Audio(decode=False))
+        except Exception:
+            pass
+        it = iter(ds)
+        while True:
+            try:
+                ex = next(it)
+            except StopIteration:
+                break
+            except Exception as e:
+                print("[extract] skip (iter):", type(e).__name__, str(e)[:60])
+                continue
             try:
                 text = (ex.get(text_col) or "")
                 text = text.strip() if isinstance(text, str) else ""
@@ -206,9 +236,12 @@ def stage_neucodec(name, n_rows):
     subprocess.run([sys.executable, os.path.join(HERE, "convert_neucodec.py"),
                     "--file", audio_list_json], cwd=os.getcwd())
     n = len(glob.glob(f"{name}_audio_neucodec/**/*.json", recursive=True))
-    print(f"[neucodec] {n} token files in {name}_audio_neucodec/")
-    if n < 0.5 * n_rows:
-        raise SystemExit(f"neucodec produced too few token files ({n}/{n_rows})")
+    # NOT a hard failure: convert_neucodec.py skips clips >20s by design, so
+    # long-form datasets legitimately yield few/zero tokens. Parquet + mp3 still
+    # publish; the neucodec zip is skipped if empty (see stage_push).
+    print(f"[neucodec] {n} token files in {name}_audio_neucodec/ "
+          f"(of {n_rows} clips; clips >20s are skipped)")
+    return n
 
 
 def zip_dir(folder):
@@ -232,6 +265,9 @@ def stage_push(name, rows, repo_src, config):
     for folder in (f"{name}_audio", f"{name}_audio_neucodec"):
         if not os.path.isdir(folder):
             print(f"[push] WARN missing {folder}, skip")
+            continue
+        if not any(fns for _, _, fns in os.walk(folder)):
+            print(f"[push] {folder} empty, skip")
             continue
         z = zip_dir(folder)
         print(f"[push] upload {z} ({os.path.getsize(z)/1e6:.1f} MB)")

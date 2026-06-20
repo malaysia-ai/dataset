@@ -14,7 +14,7 @@ Usage:
 tasks.json: [{"repo": "owner/name", "name": "ConfigName"}, ...]
 (name optional -> derived from repo's last path segment)
 """
-import os, sys, re, json, time, subprocess
+import os, sys, re, json, time, signal, subprocess
 from collections import deque
 import click
 
@@ -44,7 +44,10 @@ def split_gpus(gpus, n):
 @click.option("--limit", default=None, type=int, help="cap number of datasets")
 @click.option("--max-samples", default=None, type=int, help="passthrough (testing)")
 @click.option("--cluster-threshold", default=0.1, type=float)
-def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshold):
+@click.option("--job-timeout", default=5400, type=int,
+              help="kill a single dataset job after this many seconds (hang guard)")
+def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshold,
+         job_timeout):
     if gpus is None:
         import torch
         gpus = [str(i) for i in range(torch.cuda.device_count())]
@@ -86,7 +89,9 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
             cmd += ["--max-samples", str(max_samples)]
         logpath = os.path.join(logdir, f"{name}.log")
         lf = open(logpath, "w")
-        p = subprocess.Popen(cmd, env=env, stdout=lf, stderr=subprocess.STDOUT)
+        # own session/process-group so a timeout can kill the whole job tree
+        p = subprocess.Popen(cmd, env=env, stdout=lf, stderr=subprocess.STDOUT,
+                             start_new_session=True)
         running[p] = (bucket, name, time.time(), logpath, lf)
         print(f"[pool] START {name}  gpus={','.join(bucket)}  (repo={repo})")
 
@@ -95,17 +100,31 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
             repo, name = queue.popleft()
             launch(repo, name, free.pop())
         for p in list(running):
-            if p.poll() is None:
-                continue
-            bucket, name, t0, logpath, lf = running.pop(p)
+            bucket, name, t0, logpath, lf = running[p]
+            rc = p.poll()
+            timed_out = False
+            if rc is None:
+                if time.time() - t0 <= job_timeout:
+                    continue
+                timed_out = True
+                try:
+                    os.killpg(os.getpgid(p.pid), signal.SIGKILL)
+                except Exception:
+                    pass
+                try:
+                    p.wait(timeout=15)
+                except Exception:
+                    pass
+            running.pop(p)
             lf.close()
             free.append(bucket)
             ok = os.path.exists(os.path.join(ckpt, f"{name}.done"))
             done += ok
             failed += (not ok)
             dt = time.time() - t0
-            print(f"[pool] {'DONE' if ok else 'FAIL'} {name} in {dt:.0f}s "
-                  f"(rc={p.returncode})  [{done} ok / {failed} fail / {total} total]")
+            tag = "TIMEOUT" if timed_out else ("DONE" if ok else "FAIL")
+            print(f"[pool] {tag} {name} in {dt:.0f}s (rc={p.returncode})  "
+                  f"[{done} ok / {failed} fail / {total} total]")
             if not ok:
                 print(f"       see {logpath}")
         time.sleep(2)

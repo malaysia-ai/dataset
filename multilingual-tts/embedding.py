@@ -10,8 +10,10 @@ import os
 # Speaker embeddings now come from titanet-vectors-fp16 (NOT malaya-speech):
 #   pip3 install git+https://github.com/Scicom-AI-Enterprise-Organization/titanet-vectors-fp16
 # Same TitaNet-L weights as before (huseinzol05/nemo-titanet_large), run in fp16.
-# Output is unchanged: one 192-d .npy per row, L2-normalized so the greedy faiss
-# IndexFlatL2 clustering (cluster-*.ipynb, threshold ~0.1) keeps working as-is.
+# Output is the RAW 192-d embedding (NOT normalized) -- exactly like the original
+# malaya-based embedding.py -- so the greedy faiss IndexFlatL2 clustering in
+# cluster-*.ipynb at threshold 0.1 groups same-voice clips as intended.
+# (Normalizing to unit length inflates same-voice L2 above 0.1 and over-splits.)
 
 def chunks(l, devices, folder):
     chunk_size = len(l) // len(devices)
@@ -46,7 +48,6 @@ def loop(rows):
             lengths = torch.tensor([x.shape[-1]], device = x.device)
             _, embs = model(x, lengths)
             e = embs[0].float().cpu().numpy()
-            e = e / (np.linalg.norm(e) + 1e-9)
             np.save(new_f, e, allow_pickle=True)
         except Exception as ex:
             print(ex)

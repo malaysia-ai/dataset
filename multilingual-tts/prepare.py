@@ -216,19 +216,24 @@ def stage_speaker(name, rows, speaker_col, threshold=0.1, dim=192):
             index.add(x); centroids += 1; return centroids - 1
         return int(I[0][0])
 
+    # match cluster-*.ipynb: a row with no (loadable) embedding is SKIPPED, not
+    # kept with a fake speaker.
+    kept = []
     for i, row in enumerate(rows):
         vf = os.path.join(emb_dir, f"{i}.npy")
         if not os.path.exists(vf):
-            row["speaker"] = f"{name}_unknown"
             continue
         try:
-            row["speaker"] = f"{name}_{assign(np.load(vf))}"
+            v = np.load(vf)
         except Exception:
-            row["speaker"] = f"{name}_unknown"
-    n_spk = len({r["speaker"] for r in rows})
-    print(f"[speaker] clustered into {n_spk} pseudo-speakers")
-    json.dump(rows, open(rows_json, "w"), ensure_ascii=False)
-    return rows
+            continue
+        row["speaker"] = f"{name}_{assign(v)}"
+        kept.append(row)
+    dropped = len(rows) - len(kept)
+    n_spk = len({r["speaker"] for r in kept})
+    print(f"[speaker] clustered {len(kept)} rows into {n_spk} speakers "
+          f"({dropped} dropped: no embedding)")
+    return kept
 
 
 def stage_neucodec(name, n_rows):

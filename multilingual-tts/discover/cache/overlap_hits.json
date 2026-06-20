@@ -1,0 +1,5885 @@
+[
+  {
+    "id": "0x3/SeniorTalk",
+    "author": "0x3",
+    "trendingScore": 0,
+    "downloads": 191,
+    "likes": 0,
+    "lastModified": "2026-04-26T12:23:23.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "0xzanuee/WaxalNLP",
+    "author": "0xzanuee",
+    "trendingScore": 0,
+    "downloads": 809,
+    "likes": 0,
+    "lastModified": "2026-02-02T11:25:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kpo",
+      "lin",
+      "lug",
+      "mas",
+      "mlg",
+      "nyn",
+      "sna",
+      "sog",
+      "swa",
+      "twi",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "AISHELL/AISHELL-3",
+    "author": "AISHELL",
+    "trendingScore": 1,
+    "downloads": 5254,
+    "likes": 10,
+    "lastModified": "2024-01-08T09:56:11.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ARTPARK-IISc/Vaani",
+    "author": "ARTPARK-IISc",
+    "trendingScore": 4,
+    "downloads": 32765,
+    "likes": 124,
+    "lastModified": "2026-05-04T19:47:37.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "image-to-text",
+      "text-to-image",
+      "text-to-speech"
+    ],
+    "language": [
+      "ne",
+      "as",
+      "ml",
+      "gu",
+      "or",
+      "en",
+      "ta",
+      "ur",
+      "te",
+      "kn",
+      "bn",
+      "hi"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "ASLP-lab/UrduSpeech",
+    "author": "ASLP-lab",
+    "trendingScore": 1,
+    "downloads": 15409,
+    "likes": 1,
+    "lastModified": "2026-06-04T12:43:17.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Ahsan1457/urdu-voice-dataset",
+    "author": "Ahsan1457",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 1,
+    "lastModified": "2025-08-07T10:15:41.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "AlienKevin/mixed_cantonese_and_english_speech",
+    "author": "AlienKevin",
+    "trendingScore": 0,
+    "downloads": 255,
+    "likes": 17,
+    "lastModified": "2024-08-02T07:41:33.000Z",
+    "task_categories": [],
+    "language": [
+      "yue"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "AmeerHumza/OutteTTS-urdu-dataset",
+    "author": "AmeerHumza",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2026-01-15T21:58:54.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "AndikaRT421/indonesian-audiobook-tts",
+    "author": "AndikaRT421",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 1,
+    "lastModified": "2025-05-07T19:54:41.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": "auto",
+    "suitability": "keyword"
+  },
+  {
+    "id": "Anilosan15/Turkish_TTS_Data",
+    "author": "Anilosan15",
+    "trendingScore": 0,
+    "downloads": 690,
+    "likes": 20,
+    "lastModified": "2026-03-08T08:11:56.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "tr"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Ankoholik/Enigma-Dataset",
+    "author": "Ankoholik",
+    "trendingScore": 1,
+    "downloads": 440,
+    "likes": 12,
+    "lastModified": "2025-05-12T17:24:35.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "ru"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Appenlimited/700h-tr-turkish-text-to-speech",
+    "author": "Appenlimited",
+    "trendingScore": 0,
+    "downloads": 398,
+    "likes": 13,
+    "lastModified": "2025-06-19T11:02:56.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "tr"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "AprilYang93/tibetan_wz_tts",
+    "author": "AprilYang93",
+    "trendingScore": 0,
+    "downloads": 23,
+    "likes": 0,
+    "lastModified": "2024-08-08T03:42:07.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Arsenal/StoryTTS",
+    "author": "Arsenal",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 5,
+    "lastModified": "2024-04-27T14:45:31.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "AtharvA7k/ClArTTS",
+    "author": "AtharvA7k",
+    "trendingScore": 0,
+    "downloads": 49,
+    "likes": 4,
+    "lastModified": "2024-04-18T08:23:32.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Avinash2307/IndicTTS_Telugu_MultiSpeaker",
+    "author": "Avinash2307",
+    "trendingScore": 0,
+    "downloads": 5,
+    "likes": 0,
+    "lastModified": "2025-11-30T09:24:07.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "BAAI/ChildMandarin",
+    "author": "BAAI",
+    "trendingScore": 0,
+    "downloads": 215,
+    "likes": 37,
+    "lastModified": "2025-05-19T17:57:42.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "BAAI/SeniorTalk",
+    "author": "BAAI",
+    "trendingScore": 1,
+    "downloads": 935,
+    "likes": 37,
+    "lastModified": "2026-01-18T16:15:38.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "BHOSAI/Azerbaijani_News_TTS",
+    "author": "BHOSAI",
+    "trendingScore": 0,
+    "downloads": 128,
+    "likes": 2,
+    "lastModified": "2025-05-10T16:47:12.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "az"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Bingsu/zeroth-korean",
+    "author": "Bingsu",
+    "trendingScore": 0,
+    "downloads": 1879,
+    "likes": 45,
+    "lastModified": "2022-08-15T10:30:30.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "BolajiJsAI/WaxalNLP",
+    "author": "BolajiJsAI",
+    "trendingScore": 0,
+    "downloads": 2528,
+    "likes": 1,
+    "lastModified": "2026-03-02T06:14:09.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "bam",
+      "bau",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "pcm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "wol",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "CMKL/Porjai-Thai-voice-dataset-central",
+    "author": "CMKL",
+    "trendingScore": 0,
+    "downloads": 159,
+    "likes": 17,
+    "lastModified": "2024-09-03T20:22:51.000Z",
+    "task_categories": [],
+    "language": [
+      "th"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "CMKL/Porjai-Thai-voice-dataset-khummuang",
+    "author": "CMKL",
+    "trendingScore": 0,
+    "downloads": 13,
+    "likes": 1,
+    "lastModified": "2024-09-03T20:22:35.000Z",
+    "task_categories": [],
+    "language": [
+      "th"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "CMKL/Porjai-Thai-voice-dataset-korat",
+    "author": "CMKL",
+    "trendingScore": 0,
+    "downloads": 25,
+    "likes": 1,
+    "lastModified": "2024-09-03T20:22:10.000Z",
+    "task_categories": [],
+    "language": [
+      "th"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "CMKL/Porjai-Thai-voice-dataset-pattani",
+    "author": "CMKL",
+    "trendingScore": 0,
+    "downloads": 33,
+    "likes": 0,
+    "lastModified": "2024-09-03T20:22:45.000Z",
+    "task_categories": [],
+    "language": [
+      "th"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Chillarmo/Armenian-speech-corpus",
+    "author": "Chillarmo",
+    "trendingScore": 0,
+    "downloads": 155,
+    "likes": 0,
+    "lastModified": "2025-12-24T11:50:31.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "hy"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Closed-TTS/Emilia-ZH",
+    "author": "Closed-TTS",
+    "trendingScore": 0,
+    "downloads": 12,
+    "likes": 0,
+    "lastModified": "2025-10-24T05:17:07.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "CoRal-project/coral-v2",
+    "author": "CoRal-project",
+    "trendingScore": 0,
+    "downloads": 1577,
+    "likes": 7,
+    "lastModified": "2025-06-26T09:58:39.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "da"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "CoRal-project/coral-v3",
+    "author": "CoRal-project",
+    "trendingScore": 0,
+    "downloads": 10103,
+    "likes": 5,
+    "lastModified": "2026-02-24T10:08:44.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "da"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "DataStudio/vivos-vie-speech2text",
+    "author": "DataStudio",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2023-08-26T12:04:29.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": "manual",
+    "suitability": "keyword"
+  },
+  {
+    "id": "DavronSherbaev/uzbekvoice",
+    "author": "DavronSherbaev",
+    "trendingScore": 1,
+    "downloads": 151,
+    "likes": 6,
+    "lastModified": "2025-02-03T08:39:38.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "DeQuackDealer/genshin-voice",
+    "author": "DeQuackDealer",
+    "trendingScore": 0,
+    "downloads": 10,
+    "likes": 0,
+    "lastModified": "2026-02-28T03:19:08.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en",
+      "ja",
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Elormiden/Hellenic-greek-parliamentary-speech",
+    "author": "Elormiden",
+    "trendingScore": 0,
+    "downloads": 197,
+    "likes": 1,
+    "lastModified": "2025-08-04T20:11:48.000Z",
+    "task_categories": [],
+    "language": [
+      "el"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Esra11/mgb2-arabic",
+    "author": "Esra11",
+    "trendingScore": 0,
+    "downloads": 241,
+    "likes": 1,
+    "lastModified": "2026-04-22T16:14:39.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Ewelinach/SeniorTalk",
+    "author": "Ewelinach",
+    "trendingScore": 0,
+    "downloads": 201,
+    "likes": 0,
+    "lastModified": "2025-12-09T13:36:47.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "FBK-MT/Speech-MASSIVE",
+    "author": "FBK-MT",
+    "trendingScore": 0,
+    "downloads": 7264,
+    "likes": 49,
+    "lastModified": "2025-10-07T15:21:44.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-classification",
+      "zero-shot-classification"
+    ],
+    "language": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hu",
+      "ko",
+      "nl",
+      "pl",
+      "pt",
+      "ru",
+      "tr",
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Firoj112/highquality_nepali_female_asr",
+    "author": "Firoj112",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 2,
+    "lastModified": "2025-11-08T12:01:20.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "FirstPotatoCoder/genshin-voice",
+    "author": "FirstPotatoCoder",
+    "trendingScore": 0,
+    "downloads": 330,
+    "likes": 0,
+    "lastModified": "2026-06-08T06:30:04.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Flamme-VRM/kazakh-speech-dataset",
+    "author": "Flamme-VRM",
+    "trendingScore": 0,
+    "downloads": 319,
+    "likes": 2,
+    "lastModified": "2026-01-07T14:09:49.000Z",
+    "task_categories": [],
+    "language": [
+      "kk"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Frostie08/cmu_haitian_creole_speech",
+    "author": "Frostie08",
+    "trendingScore": 0,
+    "downloads": 90,
+    "likes": 0,
+    "lastModified": "2026-02-26T20:26:05.000Z",
+    "task_categories": [],
+    "language": [
+      "ht"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "ICML-2026/ToneWebinars",
+    "author": "ICML-2026",
+    "trendingScore": 0,
+    "downloads": 19,
+    "likes": 0,
+    "lastModified": "2026-01-29T00:05:38.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ru",
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "IbratDO/uzbekvoice-2k-each-accent",
+    "author": "IbratDO",
+    "trendingScore": 0,
+    "downloads": 12,
+    "likes": 0,
+    "lastModified": "2025-10-06T17:39:42.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Jaspernl/The_Spoken_Wikipedia_Corpora_Dutch_ASR_Hiidden",
+    "author": "Jaspernl",
+    "trendingScore": 0,
+    "downloads": 106,
+    "likes": 1,
+    "lastModified": "2024-07-06T09:14:41.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "nl"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Javid42/azerbaijani-speech-dataset",
+    "author": "Javid42",
+    "trendingScore": 0,
+    "downloads": 6,
+    "likes": 0,
+    "lastModified": "2025-12-08T20:45:12.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "KTH/hungarian-single-speaker-tts",
+    "author": "KTH",
+    "trendingScore": 0,
+    "downloads": 162,
+    "likes": 14,
+    "lastModified": "2023-01-22T13:11:38.000Z",
+    "task_categories": [
+      "other",
+      "text-to-speech"
+    ],
+    "language": [
+      "hu"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "KYAGABA/combined_amharic_speech_dataset",
+    "author": "KYAGABA",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 0,
+    "lastModified": "2024-12-15T14:31:00.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Kamtera/ParsiGoo",
+    "author": "Kamtera",
+    "trendingScore": 0,
+    "downloads": 55,
+    "likes": 11,
+    "lastModified": "2023-06-11T09:21:29.000Z",
+    "task_categories": [
+      "other",
+      "text-to-speech"
+    ],
+    "language": "fa",
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "KandirResearch/DarijaTTS-clean",
+    "author": "KandirResearch",
+    "trendingScore": 0,
+    "downloads": 49,
+    "likes": 1,
+    "lastModified": "2025-03-13T01:00:05.000Z",
+    "task_categories": [],
+    "language": [
+      "ary"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Ken-Z/Latin-Audio",
+    "author": "Ken-Z",
+    "trendingScore": 0,
+    "downloads": 2228,
+    "likes": 8,
+    "lastModified": "2026-05-14T17:54:44.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "la"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "KhateebAI/ClArTTS",
+    "author": "KhateebAI",
+    "trendingScore": 0,
+    "downloads": 107,
+    "likes": 0,
+    "lastModified": "2025-08-21T08:19:06.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Lacito/pangloss",
+    "author": "Lacito",
+    "trendingScore": 0,
+    "downloads": 239,
+    "likes": 4,
+    "lastModified": "2024-07-19T15:57:46.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "jya",
+      "nru"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MBZUAI/ArVoice",
+    "author": "MBZUAI",
+    "trendingScore": 0,
+    "downloads": 527,
+    "likes": 31,
+    "lastModified": "2025-10-31T12:06:52.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-audio",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MBZUAI/ClArTTS",
+    "author": "MBZUAI",
+    "trendingScore": 1,
+    "downloads": 500,
+    "likes": 24,
+    "lastModified": "2025-10-01T11:28:43.000Z",
+    "task_categories": [
+      "text-to-audio",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MehdiAslam/assamese-tts-train",
+    "author": "MehdiAslam",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-06-01T08:00:25.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Mitty3mm/SeniorTalk",
+    "author": "Mitty3mm",
+    "trendingScore": 0,
+    "downloads": 93,
+    "likes": 0,
+    "lastModified": "2026-01-12T09:28:22.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MohamedRashad/MASC-Arabic",
+    "author": "MohamedRashad",
+    "trendingScore": 0,
+    "downloads": 2404,
+    "likes": 5,
+    "lastModified": "2026-04-06T12:40:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MohamedRashad/Quran-Recitations",
+    "author": "MohamedRashad",
+    "trendingScore": 0,
+    "downloads": 1148,
+    "likes": 62,
+    "lastModified": "2025-03-30T11:19:54.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MohamedRashad/SADA22",
+    "author": "MohamedRashad",
+    "trendingScore": 0,
+    "downloads": 1507,
+    "likes": 19,
+    "lastModified": "2025-05-03T17:02:55.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MohamedRashad/mgb2-arabic",
+    "author": "MohamedRashad",
+    "trendingScore": 0,
+    "downloads": 4618,
+    "likes": 6,
+    "lastModified": "2025-12-27T21:34:57.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "MohamedRashad/multilingual-tts",
+    "author": "MohamedRashad",
+    "trendingScore": 0,
+    "downloads": 171,
+    "likes": 49,
+    "lastModified": "2023-12-12T21:04:06.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "ar",
+      "en",
+      "zh",
+      "es",
+      "fr",
+      "hi",
+      "ru",
+      "pt",
+      "ja",
+      "de",
+      "tr",
+      "bn",
+      "id",
+      "ur",
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "NandemoGHS/Japanese-Eroge-Voice",
+    "author": "NandemoGHS",
+    "trendingScore": 1,
+    "downloads": 537,
+    "likes": 34,
+    "lastModified": "2025-08-31T15:17:43.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ja"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "NandemoGHS/Japanese-Eroge-Voice-V2",
+    "author": "NandemoGHS",
+    "trendingScore": 0,
+    "downloads": 1619,
+    "likes": 48,
+    "lastModified": "2026-01-15T05:15:01.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ja"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "NhutP/VietSpeech",
+    "author": "NhutP",
+    "trendingScore": 1,
+    "downloads": 1325,
+    "likes": 35,
+    "lastModified": "2025-04-25T08:24:55.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "NoureddineMOR/tachelhiyt-darija",
+    "author": "NoureddineMOR",
+    "trendingScore": 0,
+    "downloads": 74,
+    "likes": 4,
+    "lastModified": "2025-11-18T22:28:39.000Z",
+    "task_categories": [
+      "text-classification",
+      "text-to-speech",
+      "translation"
+    ],
+    "language": [],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Nourhann/Arabic-Diacritized-TTS",
+    "author": "Nourhann",
+    "trendingScore": 0,
+    "downloads": 47,
+    "likes": 9,
+    "lastModified": "2025-02-20T21:26:25.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Nourhann/merged_Arabic-Diacritized_ClArTTS",
+    "author": "Nourhann",
+    "trendingScore": 0,
+    "downloads": 6,
+    "likes": 0,
+    "lastModified": "2025-03-03T22:30:45.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "OpenSpeechHub/Genshin-Voice",
+    "author": "OpenSpeechHub",
+    "trendingScore": 0,
+    "downloads": 127,
+    "likes": 1,
+    "lastModified": "2025-08-15T07:35:46.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "OpenSpeechHub/Japanese-Anime-Speech",
+    "author": "OpenSpeechHub",
+    "trendingScore": 0,
+    "downloads": 173,
+    "likes": 3,
+    "lastModified": "2025-04-25T13:44:10.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "OpenSpeechHub/Japanese-Anime-Speech-v2",
+    "author": "OpenSpeechHub",
+    "trendingScore": 0,
+    "downloads": 326,
+    "likes": 1,
+    "lastModified": "2025-04-25T16:18:56.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Opit/bulgarian_tts",
+    "author": "Opit",
+    "trendingScore": 0,
+    "downloads": 41,
+    "likes": 2,
+    "lastModified": "2024-02-20T14:34:01.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "OuassimZm/Dastum-yar-stt-breton-data",
+    "author": "OuassimZm",
+    "trendingScore": 0,
+    "downloads": 63,
+    "likes": 0,
+    "lastModified": "2025-09-15T18:28:01.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "PHBJT/cml-tts",
+    "author": "PHBJT",
+    "trendingScore": 0,
+    "downloads": 376,
+    "likes": 0,
+    "lastModified": "2024-09-25T14:48:53.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Phonepadith/laos-speech-dataset",
+    "author": "Phonepadith",
+    "trendingScore": 0,
+    "downloads": 49,
+    "likes": 1,
+    "lastModified": "2025-09-04T04:58:30.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Phonepadith/laos-voice-dataset-v2",
+    "author": "Phonepadith",
+    "trendingScore": 0,
+    "downloads": 84,
+    "likes": 0,
+    "lastModified": "2025-10-16T06:52:41.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Phsntom/WaxalNLP",
+    "author": "Phsntom",
+    "trendingScore": 0,
+    "downloads": 8398,
+    "likes": 0,
+    "lastModified": "2026-02-04T07:36:36.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Pragmaticl/ngochuyen_voice",
+    "author": "Pragmaticl",
+    "trendingScore": 0,
+    "downloads": 8,
+    "likes": 0,
+    "lastModified": "2026-01-14T16:02:41.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "PrakashPask/indic_tts",
+    "author": "PrakashPask",
+    "trendingScore": 0,
+    "downloads": 225,
+    "likes": 0,
+    "lastModified": "2025-11-21T09:59:41.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Ranjit/or_in_dataset",
+    "author": "Ranjit",
+    "trendingScore": 0,
+    "downloads": 580,
+    "likes": 0,
+    "lastModified": "2023-03-29T07:23:02.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "or"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Rdyh/everyayah",
+    "author": "Rdyh",
+    "trendingScore": 0,
+    "downloads": 13,
+    "likes": 0,
+    "lastModified": "2025-11-04T05:59:56.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": "manual",
+    "suitability": "strong"
+  },
+  {
+    "id": "RenderCode/AnimeVox",
+    "author": "RenderCode",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 0,
+    "lastModified": "2026-02-02T07:31:16.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Ritwika03/hindi_ai4bharat_indictts",
+    "author": "Ritwika03",
+    "trendingScore": 0,
+    "downloads": 500,
+    "likes": 1,
+    "lastModified": "2025-04-04T13:37:26.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "RobotsMali/afvoices",
+    "author": "RobotsMali",
+    "trendingScore": 0,
+    "downloads": 982,
+    "likes": 6,
+    "lastModified": "2025-11-25T12:54:58.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "bm"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "SPRINGLab/IndicTTS-English",
+    "author": "SPRINGLab",
+    "trendingScore": 0,
+    "downloads": 417,
+    "likes": 2,
+    "lastModified": "2024-11-14T13:27:33.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "SRP-base-model-training/kazakh_speech_dataset_ksd",
+    "author": "SRP-base-model-training",
+    "trendingScore": 0,
+    "downloads": 88,
+    "likes": 2,
+    "lastModified": "2025-09-29T05:28:45.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "kk"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "SWivid/Habibi",
+    "author": "SWivid",
+    "trendingScore": 0,
+    "downloads": 290,
+    "likes": 6,
+    "lastModified": "2026-01-21T19:40:12.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "SayantanJoker/original_data_malayalam_tts",
+    "author": "SayantanJoker",
+    "trendingScore": 0,
+    "downloads": 20,
+    "likes": 0,
+    "lastModified": "2025-03-15T20:46:21.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "SeyedAli/Persian-Speech-Dataset",
+    "author": "SeyedAli",
+    "trendingScore": 0,
+    "downloads": 99,
+    "likes": 12,
+    "lastModified": "2023-09-15T08:01:55.000Z",
+    "task_categories": [],
+    "language": [
+      "fa"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Shaju07/UrduTTSDataset",
+    "author": "Shaju07",
+    "trendingScore": 0,
+    "downloads": 2,
+    "likes": 1,
+    "lastModified": "2025-03-04T23:37:36.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Shaju07/UrduTTSDataset-22khz",
+    "author": "Shaju07",
+    "trendingScore": 0,
+    "downloads": 20,
+    "likes": 0,
+    "lastModified": "2025-03-13T01:19:04.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "SilencioNetwork/amharic-speech",
+    "author": "SilencioNetwork",
+    "trendingScore": 0,
+    "downloads": 21,
+    "likes": 0,
+    "lastModified": "2026-04-07T00:10:23.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "am"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Somali-tts/somali-tts-datasets",
+    "author": "Somali-tts",
+    "trendingScore": 0,
+    "downloads": 109,
+    "likes": 6,
+    "lastModified": "2025-05-07T05:40:27.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Sonal0205/telugu_whisper_asr",
+    "author": "Sonal0205",
+    "trendingScore": 0,
+    "downloads": 16,
+    "likes": 0,
+    "lastModified": "2024-05-27T01:52:08.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "SparkAudio/voxbox",
+    "author": "SparkAudio",
+    "trendingScore": 1,
+    "downloads": 9374,
+    "likes": 74,
+    "lastModified": "2025-04-15T07:43:25.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Azerbaijani-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 13,
+    "likes": 0,
+    "lastModified": "2026-03-30T11:52:33.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "az"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Belarusian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 0,
+    "lastModified": "2026-03-30T12:34:31.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "be"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Catalan-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2026-03-30T12:16:07.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ca"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Danish-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 20,
+    "likes": 0,
+    "lastModified": "2026-03-31T07:12:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "da"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Estonian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 21,
+    "likes": 0,
+    "lastModified": "2026-03-31T07:25:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "et"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Galician-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2026-03-31T09:32:28.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "gl"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Hebrew-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 17,
+    "likes": 0,
+    "lastModified": "2026-03-31T10:40:53.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "he"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Hungarian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2026-03-31T10:53:48.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "hu"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Kazakh-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 21,
+    "likes": 0,
+    "lastModified": "2026-04-01T10:32:58.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Latvian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 6,
+    "likes": 0,
+    "lastModified": "2026-04-02T10:55:36.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "la"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Lithuanian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2026-04-02T10:44:31.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "lt"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Macedonian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 17,
+    "likes": 0,
+    "lastModified": "2026-04-01T10:45:49.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "mk"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Malayalam-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2026-04-01T14:05:53.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ml"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Marathi-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 0,
+    "lastModified": "2026-04-02T10:55:09.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "mr"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Slovak-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 16,
+    "likes": 0,
+    "lastModified": "2026-04-01T13:36:29.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "sk"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Tamil-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2026-04-01T13:53:34.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ta"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/Ukrainian-Speech-Dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 8,
+    "likes": 0,
+    "lastModified": "2026-04-02T11:02:55.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "uk"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Speech-data/armenian-speech-dataset",
+    "author": "Speech-data",
+    "trendingScore": 0,
+    "downloads": 21,
+    "likes": 0,
+    "lastModified": "2026-03-27T13:00:26.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "hy"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Taklaxbr/turkishvoicedataset",
+    "author": "Taklaxbr",
+    "trendingScore": 0,
+    "downloads": 57,
+    "likes": 0,
+    "lastModified": "2026-06-12T20:25:07.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "tr"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Thanarit/Thai-Voice-Test-10000",
+    "author": "Thanarit",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-05-30T13:17:17.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Thomcles/Czech-Speech-Monospeaker-Honza",
+    "author": "Thomcles",
+    "trendingScore": 0,
+    "downloads": 23,
+    "likes": 1,
+    "lastModified": "2025-11-29T12:21:48.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "cs"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Thomcles/Persian-Farsi-Speech",
+    "author": "Thomcles",
+    "trendingScore": 0,
+    "downloads": 902,
+    "likes": 16,
+    "lastModified": "2025-11-09T08:41:17.000Z",
+    "task_categories": [
+      "audio-to-audio",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "fa"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "Thomcles/YodaLingua-Farsi",
+    "author": "Thomcles",
+    "trendingScore": 0,
+    "downloads": 159,
+    "likes": 6,
+    "lastModified": "2026-04-27T16:10:03.000Z",
+    "task_categories": [
+      "any-to-any",
+      "audio-classification",
+      "audio-to-audio",
+      "automatic-speech-recognition",
+      "text-to-audio",
+      "text-to-speech",
+      "voice-activity-detection"
+    ],
+    "language": [
+      "fa"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "TingChen-ppmc/Changsha_Dialect_Conversational_Speech_Corpus",
+    "author": "TingChen-ppmc",
+    "trendingScore": 0,
+    "downloads": 61,
+    "likes": 2,
+    "lastModified": "2023-12-20T15:49:23.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "TingChen-ppmc/Nanchang_Dialect_Conversational_Speech_Corpus",
+    "author": "TingChen-ppmc",
+    "trendingScore": 0,
+    "downloads": 50,
+    "likes": 1,
+    "lastModified": "2023-12-20T15:46:07.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "TingChen-ppmc/Shanghai_Dialect_Conversational_Speech_Corpus",
+    "author": "TingChen-ppmc",
+    "trendingScore": 0,
+    "downloads": 125,
+    "likes": 9,
+    "lastModified": "2024-05-31T19:59:30.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "TingChen-ppmc/Tianjin_Dialect_Conversational_Speech_Corpus",
+    "author": "TingChen-ppmc",
+    "trendingScore": 0,
+    "downloads": 21,
+    "likes": 0,
+    "lastModified": "2024-05-31T20:00:36.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "TingChen-ppmc/Zhengzhou_Dialect_Conversational_Speech_Corpus",
+    "author": "TingChen-ppmc",
+    "trendingScore": 0,
+    "downloads": 80,
+    "likes": 3,
+    "lastModified": "2023-12-20T15:51:51.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "TwinkStart/KeSpeech",
+    "author": "TwinkStart",
+    "trendingScore": 1,
+    "downloads": 799,
+    "likes": 10,
+    "lastModified": "2025-01-21T09:58:31.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "Vikhrmodels/ToneWebinars",
+    "author": "Vikhrmodels",
+    "trendingScore": 0,
+    "downloads": 1059,
+    "likes": 12,
+    "lastModified": "2025-06-17T11:16:30.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ru",
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "Zackmortar/Quran-Recitations",
+    "author": "Zackmortar",
+    "trendingScore": 0,
+    "downloads": 11,
+    "likes": 0,
+    "lastModified": "2026-01-19T23:44:55.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "aaparajit02/punjabi-asr",
+    "author": "aaparajit02",
+    "trendingScore": 0,
+    "downloads": 261,
+    "likes": 3,
+    "lastModified": "2023-07-23T17:11:39.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "pa"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ademax/vivos-vie-speech2text",
+    "author": "ademax",
+    "trendingScore": 0,
+    "downloads": 147,
+    "likes": 3,
+    "lastModified": "2023-08-26T04:21:56.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "ademax/vlsp-vie-speech2text1",
+    "author": "ademax",
+    "trendingScore": 0,
+    "downloads": 16,
+    "likes": 1,
+    "lastModified": "2023-08-26T11:31:39.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "agufsamudra/tts-indo",
+    "author": "agufsamudra",
+    "trendingScore": 0,
+    "downloads": 337,
+    "likes": 8,
+    "lastModified": "2025-05-18T21:02:53.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "id"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ahmed220v/mgb2-arabic",
+    "author": "ahmed220v",
+    "trendingScore": 0,
+    "downloads": 16,
+    "likes": 0,
+    "lastModified": "2026-02-24T21:53:44.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ai4bharat/Rasa",
+    "author": "ai4bharat",
+    "trendingScore": 1,
+    "downloads": 3844,
+    "likes": 38,
+    "lastModified": "2026-06-06T14:50:25.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "as",
+      "bn",
+      "kn",
+      "ml",
+      "mr",
+      "ne",
+      "ta",
+      "pa",
+      "te",
+      "sa",
+      "ur",
+      "ks",
+      "sd"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "ai4bharat/indicvoices_r",
+    "author": "ai4bharat",
+    "trendingScore": 1,
+    "downloads": 25463,
+    "likes": 31,
+    "lastModified": "2025-03-06T05:52:13.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "as",
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ks",
+      "ml",
+      "mr",
+      "ne",
+      "or",
+      "pa",
+      "sa",
+      "ta",
+      "te",
+      "ur"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "aidctech/laos-speech-dataset",
+    "author": "aidctech",
+    "trendingScore": 0,
+    "downloads": 135,
+    "likes": 0,
+    "lastModified": "2026-03-05T09:34:07.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "akuzdeuov/kazakh-emotional-tts",
+    "author": "akuzdeuov",
+    "trendingScore": 0,
+    "downloads": 564,
+    "likes": 0,
+    "lastModified": "2026-02-12T06:30:55.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "alexandrainst/nst-da",
+    "author": "alexandrainst",
+    "trendingScore": 0,
+    "downloads": 5232,
+    "likes": 10,
+    "lastModified": "2023-10-05T14:27:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "da"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "amaai-lab/DisfluencySpeech",
+    "author": "amaai-lab",
+    "trendingScore": 0,
+    "downloads": 265,
+    "likes": 21,
+    "lastModified": "2024-06-27T06:05:30.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "amansingh203/stuttering_asr",
+    "author": "amansingh203",
+    "trendingScore": 0,
+    "downloads": 19,
+    "likes": 3,
+    "lastModified": "2023-09-18T03:53:29.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "amitpant7/nepali-speech-to-text",
+    "author": "amitpant7",
+    "trendingScore": 0,
+    "downloads": 69,
+    "likes": 0,
+    "lastModified": "2024-10-02T16:18:50.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "amphion/Emilia-NV",
+    "author": "amphion",
+    "trendingScore": 0,
+    "downloads": 516,
+    "likes": 44,
+    "lastModified": "2025-09-18T06:19:01.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "ar5entum/indic_hi_en_tts",
+    "author": "ar5entum",
+    "trendingScore": 0,
+    "downloads": 42,
+    "likes": 0,
+    "lastModified": "2025-04-14T10:16:40.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "aranemini/southern-kurdish-asr",
+    "author": "aranemini",
+    "trendingScore": 0,
+    "downloads": 123,
+    "likes": 1,
+    "lastModified": "2026-03-02T15:42:16.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "sdh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "arbml/sudanese_dialect_speech",
+    "author": "arbml",
+    "trendingScore": 0,
+    "downloads": 68,
+    "likes": 4,
+    "lastModified": "2022-12-04T16:44:26.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "ardagunsuren/turkish-voice-dataset",
+    "author": "ardagunsuren",
+    "trendingScore": 0,
+    "downloads": 8,
+    "likes": 1,
+    "lastModified": "2025-03-17T21:14:41.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "armanibadboy/kazakh-tts-test",
+    "author": "armanibadboy",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-01-24T12:18:02.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "armanibadboy/kazakh-tts-val",
+    "author": "armanibadboy",
+    "trendingScore": 0,
+    "downloads": 5,
+    "likes": 0,
+    "lastModified": "2025-01-24T11:44:21.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "arpit-tiwari/syspin-telugu-tts",
+    "author": "arpit-tiwari",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 1,
+    "lastModified": "2025-07-02T12:32:13.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "asadullah797/greek-tts-dataset",
+    "author": "asadullah797",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2026-02-09T20:59:27.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "asmarhajizada/azerbaijani-audiobooks",
+    "author": "asmarhajizada",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2026-03-03T15:48:01.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "azamjonalijonov/uzbekvoice",
+    "author": "azamjonalijonov",
+    "trendingScore": 0,
+    "downloads": 277,
+    "likes": 0,
+    "lastModified": "2026-01-19T09:36:17.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "badrex/amharic-speech",
+    "author": "badrex",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 0,
+    "lastModified": "2025-10-30T11:51:06.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "badrex/swahili-speech-400hr",
+    "author": "badrex",
+    "trendingScore": 0,
+    "downloads": 204,
+    "likes": 1,
+    "lastModified": "2025-10-16T14:30:59.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "sw"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "bdallhrajh371/WaxalNLP",
+    "author": "bdallhrajh371",
+    "trendingScore": 0,
+    "downloads": 5589,
+    "likes": 0,
+    "lastModified": "2026-04-05T21:01:32.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "bau",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "pcm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "bekzod123/uzbek_voice",
+    "author": "bekzod123",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2025-01-24T14:33:35.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "beleata74/bulgarian-audiobooks-tts-400h",
+    "author": "beleata74",
+    "trendingScore": 0,
+    "downloads": 137,
+    "likes": 1,
+    "lastModified": "2026-02-18T10:38:13.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "beyoru/vi-voice",
+    "author": "beyoru",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 0,
+    "lastModified": "2025-12-24T09:16:04.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "blueTuberose/swahili-speech-400hr",
+    "author": "blueTuberose",
+    "trendingScore": 0,
+    "downloads": 205,
+    "likes": 0,
+    "lastModified": "2026-04-17T10:18:39.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "sw"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "bnriiitb/telugu_asr",
+    "author": "bnriiitb",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 1,
+    "lastModified": "2022-11-22T11:29:06.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "bond005/sova_rudevices",
+    "author": "bond005",
+    "trendingScore": 0,
+    "downloads": 675,
+    "likes": 13,
+    "lastModified": "2022-11-01T15:59:30.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ru"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "boniromou/zh-yue-tts-dataset",
+    "author": "boniromou",
+    "trendingScore": 0,
+    "downloads": 10,
+    "likes": 1,
+    "lastModified": "2024-11-16T15:29:34.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "capleaf/viVoice",
+    "author": "capleaf",
+    "trendingScore": 0,
+    "downloads": 1569,
+    "likes": 89,
+    "lastModified": "2024-07-01T07:00:51.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "chukypedro/africanvoices_hau",
+    "author": "chukypedro",
+    "trendingScore": 0,
+    "downloads": 970,
+    "likes": 1,
+    "lastModified": "2025-11-03T14:55:49.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "classla/ParlaSpeech-CZ",
+    "author": "classla",
+    "trendingScore": 0,
+    "downloads": 1691,
+    "likes": 5,
+    "lastModified": "2025-07-02T06:02:42.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "classla/ParlaSpeech-HR",
+    "author": "classla",
+    "trendingScore": 0,
+    "downloads": 1736,
+    "likes": 5,
+    "lastModified": "2025-07-02T06:01:50.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "classla/ParlaSpeech-PL",
+    "author": "classla",
+    "trendingScore": 0,
+    "downloads": 75,
+    "likes": 6,
+    "lastModified": "2025-07-02T06:02:15.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "classla/ParlaSpeech-RS",
+    "author": "classla",
+    "trendingScore": 0,
+    "downloads": 702,
+    "likes": 4,
+    "lastModified": "2025-12-01T13:48:26.000Z",
+    "task_categories": [],
+    "language": [
+      "sr"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "claudefitz/WaxalNLP",
+    "author": "claudefitz",
+    "trendingScore": 0,
+    "downloads": 1016,
+    "likes": 0,
+    "lastModified": "2026-03-13T19:26:58.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "bau",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "pcm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "cryptpesa/swahili-speech-400hr",
+    "author": "cryptpesa",
+    "trendingScore": 0,
+    "downloads": 125,
+    "likes": 0,
+    "lastModified": "2026-05-01T15:40:34.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "sw"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "cubukcum/TurkishVoiceDataset",
+    "author": "cubukcum",
+    "trendingScore": 0,
+    "downloads": 131,
+    "likes": 4,
+    "lastModified": "2025-09-01T06:05:46.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-audio",
+      "text-to-speech"
+    ],
+    "language": [
+      "tr"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "damerajee/Hindi-audio-speech",
+    "author": "damerajee",
+    "trendingScore": 0,
+    "downloads": 29,
+    "likes": 2,
+    "lastModified": "2024-06-20T13:57:43.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "datadriven-company/TTS-Danish",
+    "author": "datadriven-company",
+    "trendingScore": 0,
+    "downloads": 100,
+    "likes": 0,
+    "lastModified": "2026-02-12T14:42:16.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "da"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "datadriven-company/TTS-Finnish",
+    "author": "datadriven-company",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2026-02-13T06:50:15.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "fi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "datadriven-company/TTS-Greek",
+    "author": "datadriven-company",
+    "trendingScore": 0,
+    "downloads": 196,
+    "likes": 0,
+    "lastModified": "2026-02-12T12:09:21.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "el"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "datadriven-company/TTS-Hungarian",
+    "author": "datadriven-company",
+    "trendingScore": 1,
+    "downloads": 233,
+    "likes": 1,
+    "lastModified": "2026-02-12T10:10:41.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "hu"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "datadriven-company/TTS-Romanian",
+    "author": "datadriven-company",
+    "trendingScore": 0,
+    "downloads": 928,
+    "likes": 2,
+    "lastModified": "2026-03-14T01:58:07.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ro"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "datadriven-company/TTS-Swedish",
+    "author": "datadriven-company",
+    "trendingScore": 0,
+    "downloads": 192,
+    "likes": 0,
+    "lastModified": "2026-02-13T07:08:10.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "sv"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "datadriven-company/WolneLektury-TTS-Polish",
+    "author": "datadriven-company",
+    "trendingScore": 0,
+    "downloads": 238,
+    "likes": 1,
+    "lastModified": "2026-02-04T21:42:19.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "pl"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "deboleen6/telugu_tts",
+    "author": "deboleen6",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 3,
+    "lastModified": "2024-05-27T10:53:59.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "deepvk/NonverbalTTS",
+    "author": "deepvk",
+    "trendingScore": 0,
+    "downloads": 744,
+    "likes": 66,
+    "lastModified": "2025-10-04T21:17:27.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "doof-ferb/VietMed_labeled",
+    "author": "doof-ferb",
+    "trendingScore": 0,
+    "downloads": 299,
+    "likes": 3,
+    "lastModified": "2024-07-06T23:13:21.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "doof-ferb/vlsp2020_vinai_100h",
+    "author": "doof-ferb",
+    "trendingScore": 1,
+    "downloads": 606,
+    "likes": 14,
+    "lastModified": "2025-04-20T20:19:38.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "erenfazlioglu/turkishvoicedataset",
+    "author": "erenfazlioglu",
+    "trendingScore": 1,
+    "downloads": 284,
+    "likes": 42,
+    "lastModified": "2024-11-26T15:30:34.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "tr"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "facebook/omnilingual-asr-corpus",
+    "author": "facebook",
+    "trendingScore": 1,
+    "downloads": 4618,
+    "likes": 206,
+    "lastModified": "2025-11-14T18:52:06.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "aae",
+      "aal",
+      "aao",
+      "abn",
+      "abr",
+      "abs",
+      "abv",
+      "acm",
+      "acw",
+      "acx",
+      "adf",
+      "aeb",
+      "aec",
+      "afb",
+      "afo",
+      "ahl",
+      "ahs",
+      "aju",
+      "ala",
+      "aln",
+      "alo",
+      "amu",
+      "anc",
+      "ank",
+      "anp",
+      "anw",
+      "aom",
+      "apc",
+      "apd",
+      "arq",
+      "ars",
+      "ary",
+      "arz",
+      "avl",
+      "awo",
+      "ayl",
+      "ayp",
+      "bbu",
+      "bcs",
+      "bcy",
+      "bda",
+      "bde",
+      "bdm",
+      "bew",
+      "bhb",
+      "bhh",
+      "bho",
+      "bhp",
+      "bhr",
+      "bjj",
+      "bjk",
+      "bjn",
+      "bjt",
+      "bky",
+      "bmm",
+      "bmq",
+      "bns",
+      "bou",
+      "bqg",
+      "bra",
+      "brh",
+      "brx",
+      "bsj",
+      "btm",
+      "bug",
+      "buo",
+      "bux",
+      "bwr",
+      "bxf",
+      "byc",
+      "bys",
+      "byx",
+      "bzc",
+      "bzw",
+      "ccg",
+      "cen",
+      "cfa",
+      "cgg",
+      "chq",
+      "ckl",
+      "ckr",
+      "cky",
+      "cte",
+      "ctl",
+      "dbd",
+      "dcc",
+      "deg",
+      "dgh",
+      "dje",
+      "dty",
+      "dzg",
+      "ebu",
+      "ego",
+      "eiv",
+      "ekr",
+      "elm",
+      "ets",
+      "etu",
+      "ext",
+      "eyo",
+      "fat",
+      "ffm",
+      "fia",
+      "fip",
+      "fkk",
+      "fuc",
+      "fue",
+      "fuf",
+      "fuh",
+      "fui",
+      "fuq",
+      "fuv",
+      "gbm",
+      "gbr",
+      "gby",
+      "gcc",
+      "gdf",
+      "ges",
+      "gjk",
+      "glw",
+      "gol",
+      "gom",
+      "gsl",
+      "gui",
+      "gur",
+      "guz",
+      "gwe",
+      "gyz",
+      "hah",
+      "hao",
+      "haw",
+      "hbb",
+      "hz",
+      "hia",
+      "hkk",
+      "hla",
+      "hno",
+      "hoj",
+      "hue",
+      "hul",
+      "hwo",
+      "ida",
+      "idu",
+      "ijc",
+      "ijn",
+      "ikw",
+      "ish",
+      "iso",
+      "its",
+      "itw",
+      "itz",
+      "jal",
+      "jax",
+      "jmx",
+      "jns",
+      "juk",
+      "juo",
+      "kai",
+      "kaj",
+      "ks",
+      "kbl",
+      "kbt",
+      "kcq",
+      "keu",
+      "kfe",
+      "kfk",
+      "kfp",
+      "kjc",
+      "kjk",
+      "kmy",
+      "kna",
+      "knn",
+      "kol",
+      "koo",
+      "kpo",
+      "kqo",
+      "ksd",
+      "kto",
+      "kj",
+      "kuh",
+      "kwm",
+      "kxp",
+      "kyx",
+      "lag",
+      "lcm",
+      "ldb",
+      "lij",
+      "lir",
+      "lkb",
+      "lla",
+      "lnu",
+      "loa",
+      "lto",
+      "lus",
+      "lwg",
+      "mab",
+      "maf",
+      "max",
+      "mde",
+      "mek",
+      "mer",
+      "meu",
+      "mfm",
+      "mfn",
+      "mfo",
+      "mfv",
+      "mgi",
+      "mig",
+      "miu",
+      "mkf",
+      "mlq",
+      "mne",
+      "mqy",
+      "mrr",
+      "mrt",
+      "msh",
+      "msw",
+      "mtr",
+      "mtu",
+      "mtx",
+      "mui",
+      "mxs",
+      "mxy",
+      "mzl",
+      "nal",
+      "nap",
+      "nbh",
+      "ncf",
+      "nco",
+      "ndi",
+      "ng",
+      "ngi",
+      "nhg",
+      "nhn",
+      "nhq",
+      "nja",
+      "noe",
+      "odk",
+      "odu",
+      "ogo",
+      "orc",
+      "pbs",
+      "pbt",
+      "pbu",
+      "pex",
+      "phr",
+      "pip",
+      "piy",
+      "pko",
+      "plt",
+      "pmq",
+      "pms",
+      "pmy",
+      "pnb",
+      "poc",
+      "poe",
+      "pow",
+      "pst",
+      "qug",
+      "qum",
+      "quv",
+      "rag",
+      "rob",
+      "rof",
+      "roo",
+      "rth",
+      "sau",
+      "say",
+      "scn",
+      "shu",
+      "si",
+      "sip",
+      "siw",
+      "sjr",
+      "skg",
+      "snc",
+      "snk",
+      "sol",
+      "sps",
+      "src",
+      "sro",
+      "ste",
+      "sua",
+      "tan",
+      "tbf",
+      "tcf",
+      "tcy",
+      "tdn",
+      "tdx",
+      "tgc",
+      "the",
+      "thq",
+      "thr",
+      "thv",
+      "tio",
+      "tkg",
+      "tkt",
+      "tlp",
+      "tpl",
+      "tpz",
+      "tqp",
+      "trp",
+      "trq",
+      "ttj",
+      "ttr",
+      "ttu",
+      "tul",
+      "tuq",
+      "tuv",
+      "tuy",
+      "tvo",
+      "twu",
+      "txs",
+      "txy",
+      "uki",
+      "uzn",
+      "vai",
+      "ver",
+      "vmc",
+      "vmj",
+      "vmm",
+      "vmp",
+      "vmz",
+      "vro",
+      "wci",
+      "weo",
+      "wja",
+      "wji",
+      "wof",
+      "xmv",
+      "xmw",
+      "xpe",
+      "xti",
+      "xtu",
+      "yay",
+      "ydd",
+      "yer",
+      "yes",
+      "zga",
+      "zoh",
+      "zor",
+      "zpv",
+      "zpy",
+      "ztg",
+      "ztn",
+      "ztp",
+      "zts",
+      "ztu"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "farabi-lab/kazakh-stt",
+    "author": "farabi-lab",
+    "trendingScore": 0,
+    "downloads": 84,
+    "likes": 7,
+    "lastModified": "2024-09-26T14:04:49.000Z",
+    "task_categories": [],
+    "language": [
+      "kk"
+    ],
+    "gated": "auto",
+    "suitability": "keyword"
+  },
+  {
+    "id": "fiifinketia/WaxalNLP",
+    "author": "fiifinketia",
+    "trendingScore": 0,
+    "downloads": 10343,
+    "likes": 1,
+    "lastModified": "2026-03-27T20:49:08.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "fiifinketia/ghana-english-asr-2700hrs",
+    "author": "fiifinketia",
+    "trendingScore": 0,
+    "downloads": 273,
+    "likes": 0,
+    "lastModified": "2026-04-06T14:26:38.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "freds0/cml_tts_dataset_polish",
+    "author": "freds0",
+    "trendingScore": 0,
+    "downloads": 44,
+    "likes": 0,
+    "lastModified": "2024-09-20T12:49:09.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "galsenai/anta_women_tts",
+    "author": "galsenai",
+    "trendingScore": 0,
+    "downloads": 145,
+    "likes": 11,
+    "lastModified": "2025-11-29T04:04:48.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "wo"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "gaops/SeniorTalk",
+    "author": "gaops",
+    "trendingScore": 0,
+    "downloads": 172,
+    "likes": 0,
+    "lastModified": "2026-01-18T09:35:16.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ghananlpcommunity/ghana-english-asr-2700hrs",
+    "author": "ghananlpcommunity",
+    "trendingScore": 0,
+    "downloads": 3061,
+    "likes": 5,
+    "lastModified": "2026-03-10T02:47:14.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "google/WaxalNLP",
+    "author": "google",
+    "trendingScore": 1,
+    "downloads": 36307,
+    "likes": 234,
+    "lastModified": "2026-06-11T13:46:09.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "bau",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "pcm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "govnejri/kazakh_speech_mfa_punctuation",
+    "author": "govnejri",
+    "trendingScore": 0,
+    "downloads": 175,
+    "likes": 1,
+    "lastModified": "2026-04-16T05:37:14.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "hadamard-2/alffa-amharic",
+    "author": "hadamard-2",
+    "trendingScore": 0,
+    "downloads": 56,
+    "likes": 1,
+    "lastModified": "2026-01-13T02:43:41.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "am"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "hawks23/malayalam-whisper-corpus_v3",
+    "author": "hawks23",
+    "trendingScore": 0,
+    "downloads": 12,
+    "likes": 0,
+    "lastModified": "2025-06-03T12:01:35.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ml"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "hetchyy/everyayah-phonemes",
+    "author": "hetchyy",
+    "trendingScore": 0,
+    "downloads": 1915,
+    "likes": 9,
+    "lastModified": "2025-11-19T03:10:47.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "hon9kon9ize/yue_emo_speech",
+    "author": "hon9kon9ize",
+    "trendingScore": 0,
+    "downloads": 593,
+    "likes": 15,
+    "lastModified": "2024-10-28T21:28:10.000Z",
+    "task_categories": [],
+    "language": [
+      "yue"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "horseman-mark/genshin-voice",
+    "author": "horseman-mark",
+    "trendingScore": 0,
+    "downloads": 10,
+    "likes": 0,
+    "lastModified": "2026-01-17T06:43:32.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en",
+      "ja",
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "hoseinshr1055/Persian_Course_TTS",
+    "author": "hoseinshr1055",
+    "trendingScore": 0,
+    "downloads": 41,
+    "likes": 0,
+    "lastModified": "2025-10-11T13:00:27.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "huayidu139/multilingual-tts",
+    "author": "huayidu139",
+    "trendingScore": 0,
+    "downloads": 19,
+    "likes": 0,
+    "lastModified": "2026-05-03T16:17:55.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "ar",
+      "en",
+      "zh",
+      "es",
+      "fr",
+      "hi",
+      "ru",
+      "pt",
+      "ja",
+      "de",
+      "tr",
+      "bn",
+      "id",
+      "ur",
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "humairawan/AnimeVox",
+    "author": "humairawan",
+    "trendingScore": 0,
+    "downloads": 35,
+    "likes": 0,
+    "lastModified": "2025-12-16T08:42:41.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "humairawan/Genshin-Voice",
+    "author": "humairawan",
+    "trendingScore": 0,
+    "downloads": 118,
+    "likes": 0,
+    "lastModified": "2025-12-16T08:38:31.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "humairawan/UrduSpeech",
+    "author": "humairawan",
+    "trendingScore": 0,
+    "downloads": 344,
+    "likes": 1,
+    "lastModified": "2025-12-11T20:02:18.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ur",
+      "ks"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "iamTangsang/OpenSLR54-Nepali-ASR",
+    "author": "iamTangsang",
+    "trendingScore": 0,
+    "downloads": 87,
+    "likes": 0,
+    "lastModified": "2024-09-21T15:07:45.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "imvladikon/hebrew_speech_campus",
+    "author": "imvladikon",
+    "trendingScore": 0,
+    "downloads": 627,
+    "likes": 6,
+    "lastModified": "2023-11-20T21:46:41.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "he"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "imvladikon/hebrew_speech_coursera",
+    "author": "imvladikon",
+    "trendingScore": 0,
+    "downloads": 331,
+    "likes": 10,
+    "lastModified": "2023-05-05T09:05:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "he"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "imvladikon/hebrew_speech_kan",
+    "author": "imvladikon",
+    "trendingScore": 0,
+    "downloads": 161,
+    "likes": 13,
+    "lastModified": "2023-05-05T09:12:15.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "he"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "inesc-id/camoes_SI",
+    "author": "inesc-id",
+    "trendingScore": 0,
+    "downloads": 5,
+    "likes": 1,
+    "lastModified": "2025-12-02T12:49:22.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "pt"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "issai/Uzbek_Speech_Corpus",
+    "author": "issai",
+    "trendingScore": 0,
+    "downloads": 84,
+    "likes": 5,
+    "lastModified": "2025-02-13T12:00:13.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "uz"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "its5Q/biggest-ru-book",
+    "author": "its5Q",
+    "trendingScore": 1,
+    "downloads": 467,
+    "likes": 22,
+    "lastModified": "2025-06-23T13:45:50.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ru"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ivanzhu109/zh-taiwan",
+    "author": "ivanzhu109",
+    "trendingScore": 0,
+    "downloads": 81,
+    "likes": 4,
+    "lastModified": "2024-03-04T02:43:54.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "jasonHuang12581/AISHELL-3",
+    "author": "jasonHuang12581",
+    "trendingScore": 0,
+    "downloads": 2867,
+    "likes": 0,
+    "lastModified": "2025-12-29T07:40:25.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "jayashreedevi2020/assamese_speech_dataset1",
+    "author": "jayashreedevi2020",
+    "trendingScore": 0,
+    "downloads": 5,
+    "likes": 0,
+    "lastModified": "2024-05-11T05:24:17.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "joujiboi/japanese-anime-speech",
+    "author": "joujiboi",
+    "trendingScore": 0,
+    "downloads": 893,
+    "likes": 155,
+    "lastModified": "2024-09-06T18:19:39.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ja"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "joujiboi/japanese-anime-speech-v2",
+    "author": "joujiboi",
+    "trendingScore": 0,
+    "downloads": 2251,
+    "likes": 141,
+    "lastModified": "2025-11-02T16:06:20.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ja"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "jsbeaudry/cmu_haitian_creole_speech",
+    "author": "jsbeaudry",
+    "trendingScore": 0,
+    "downloads": 121,
+    "likes": 3,
+    "lastModified": "2025-04-23T05:32:04.000Z",
+    "task_categories": [],
+    "language": [
+      "ht"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "kaab4321/merged_urdu_TTS",
+    "author": "kaab4321",
+    "trendingScore": 0,
+    "downloads": 2,
+    "likes": 0,
+    "lastModified": "2025-02-18T19:16:24.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "keypa/common_voice_22",
+    "author": "keypa",
+    "trendingScore": 0,
+    "downloads": 200,
+    "likes": 0,
+    "lastModified": "2025-10-28T09:59:52.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "keystats/swahili_asr_data",
+    "author": "keystats",
+    "trendingScore": 0,
+    "downloads": 93,
+    "likes": 0,
+    "lastModified": "2025-11-08T06:11:06.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-audio"
+    ],
+    "language": [
+      "sw"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "kingmhd1519/assamese-tts-train",
+    "author": "kingmhd1519",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-05-28T02:11:55.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "language-and-voice-lab/raddromur_asr",
+    "author": "language-and-voice-lab",
+    "trendingScore": 0,
+    "downloads": 156,
+    "likes": 3,
+    "lastModified": "2024-08-04T00:16:38.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "is"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "language-and-voice-lab/samromur_children",
+    "author": "language-and-voice-lab",
+    "trendingScore": 0,
+    "downloads": 264,
+    "likes": 9,
+    "lastModified": "2023-10-15T16:02:44.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "is"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "laosweed/lao-data-speech",
+    "author": "laosweed",
+    "trendingScore": 0,
+    "downloads": 85,
+    "likes": 0,
+    "lastModified": "2025-11-21T16:05:08.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "lengocquangLAB/phoaudiobook",
+    "author": "lengocquangLAB",
+    "trendingScore": 0,
+    "downloads": 2,
+    "likes": 0,
+    "lastModified": "2025-07-03T09:01:38.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "leyu-amharic/leyu-amharic-gojjam-dialect",
+    "author": "leyu-amharic",
+    "trendingScore": 0,
+    "downloads": 245,
+    "likes": 4,
+    "lastModified": "2026-03-17T13:50:08.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "am"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "lianghsun/zh-taiwan",
+    "author": "lianghsun",
+    "trendingScore": 0,
+    "downloads": 66,
+    "likes": 1,
+    "lastModified": "2026-04-14T23:00:17.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "linagora/linto-dataset-audio-ar-tn",
+    "author": "linagora",
+    "trendingScore": 1,
+    "downloads": 1347,
+    "likes": 20,
+    "lastModified": "2025-04-11T08:54:46.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-audio",
+      "text-to-speech"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "lindonghello/omnilingual-asr-corpus",
+    "author": "lindonghello",
+    "trendingScore": 0,
+    "downloads": 3360,
+    "likes": 0,
+    "lastModified": "2026-04-25T11:37:39.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "aae",
+      "aal",
+      "aao",
+      "abn",
+      "abr",
+      "abs",
+      "abv",
+      "acm",
+      "acw",
+      "acx",
+      "adf",
+      "aeb",
+      "aec",
+      "afb",
+      "afo",
+      "ahl",
+      "ahs",
+      "aju",
+      "ala",
+      "aln",
+      "alo",
+      "amu",
+      "anc",
+      "ank",
+      "anp",
+      "anw",
+      "aom",
+      "apc",
+      "apd",
+      "arq",
+      "ars",
+      "ary",
+      "arz",
+      "avl",
+      "awo",
+      "ayl",
+      "ayp",
+      "bbu",
+      "bcs",
+      "bcy",
+      "bda",
+      "bde",
+      "bdm",
+      "bew",
+      "bhb",
+      "bhh",
+      "bho",
+      "bhp",
+      "bhr",
+      "bjj",
+      "bjk",
+      "bjn",
+      "bjt",
+      "bky",
+      "bmm",
+      "bmq",
+      "bns",
+      "bou",
+      "bqg",
+      "bra",
+      "brh",
+      "brx",
+      "bsj",
+      "btm",
+      "bug",
+      "buo",
+      "bux",
+      "bwr",
+      "bxf",
+      "byc",
+      "bys",
+      "byx",
+      "bzc",
+      "bzw",
+      "ccg",
+      "cen",
+      "cfa",
+      "cgg",
+      "chq",
+      "ckl",
+      "ckr",
+      "cky",
+      "cte",
+      "ctl",
+      "dbd",
+      "dcc",
+      "deg",
+      "dgh",
+      "dje",
+      "dty",
+      "dzg",
+      "ebu",
+      "ego",
+      "eiv",
+      "ekr",
+      "elm",
+      "ets",
+      "etu",
+      "ext",
+      "eyo",
+      "fat",
+      "ffm",
+      "fia",
+      "fip",
+      "fkk",
+      "fuc",
+      "fue",
+      "fuf",
+      "fuh",
+      "fui",
+      "fuq",
+      "fuv",
+      "gbm",
+      "gbr",
+      "gby",
+      "gcc",
+      "gdf",
+      "ges",
+      "gjk",
+      "glw",
+      "gol",
+      "gom",
+      "gsl",
+      "gui",
+      "gur",
+      "guz",
+      "gwe",
+      "gyz",
+      "hah",
+      "hao",
+      "haw",
+      "hbb",
+      "hz",
+      "hia",
+      "hkk",
+      "hla",
+      "hno",
+      "hoj",
+      "hue",
+      "hul",
+      "hwo",
+      "ida",
+      "idu",
+      "ijc",
+      "ijn",
+      "ikw",
+      "ish",
+      "iso",
+      "its",
+      "itw",
+      "itz",
+      "jal",
+      "jax",
+      "jmx",
+      "jns",
+      "juk",
+      "juo",
+      "kai",
+      "kaj",
+      "ks",
+      "kbl",
+      "kbt",
+      "kcq",
+      "keu",
+      "kfe",
+      "kfk",
+      "kfp",
+      "kjc",
+      "kjk",
+      "kmy",
+      "kna",
+      "knn",
+      "kol",
+      "koo",
+      "kpo",
+      "kqo",
+      "ksd",
+      "kto",
+      "kj",
+      "kuh",
+      "kwm",
+      "kxp",
+      "kyx",
+      "lag",
+      "lcm",
+      "ldb",
+      "lij",
+      "lir",
+      "lkb",
+      "lla",
+      "lnu",
+      "loa",
+      "lto",
+      "lus",
+      "lwg",
+      "mab",
+      "maf",
+      "max",
+      "mde",
+      "mek",
+      "mer",
+      "meu",
+      "mfm",
+      "mfn",
+      "mfo",
+      "mfv",
+      "mgi",
+      "mig",
+      "miu",
+      "mkf",
+      "mlq",
+      "mne",
+      "mqy",
+      "mrr",
+      "mrt",
+      "msh",
+      "msw",
+      "mtr",
+      "mtu",
+      "mtx",
+      "mui",
+      "mxs",
+      "mxy",
+      "mzl",
+      "nal",
+      "nap",
+      "nbh",
+      "ncf",
+      "nco",
+      "ndi",
+      "ng",
+      "ngi",
+      "nhg",
+      "nhn",
+      "nhq",
+      "nja",
+      "noe",
+      "odk",
+      "odu",
+      "ogo",
+      "orc",
+      "pbs",
+      "pbt",
+      "pbu",
+      "pex",
+      "phr",
+      "pip",
+      "piy",
+      "pko",
+      "plt",
+      "pmq",
+      "pms",
+      "pmy",
+      "pnb",
+      "poc",
+      "poe",
+      "pow",
+      "pst",
+      "qug",
+      "qum",
+      "quv",
+      "rag",
+      "rob",
+      "rof",
+      "roo",
+      "rth",
+      "sau",
+      "say",
+      "scn",
+      "shu",
+      "si",
+      "sip",
+      "siw",
+      "sjr",
+      "skg",
+      "snc",
+      "snk",
+      "sol",
+      "sps",
+      "src",
+      "sro",
+      "ste",
+      "sua",
+      "tan",
+      "tbf",
+      "tcf",
+      "tcy",
+      "tdn",
+      "tdx",
+      "tgc",
+      "the",
+      "thq",
+      "thr",
+      "thv",
+      "tio",
+      "tkg",
+      "tkt",
+      "tlp",
+      "tpl",
+      "tpz",
+      "tqp",
+      "trp",
+      "trq",
+      "ttj",
+      "ttr",
+      "ttu",
+      "tul",
+      "tuq",
+      "tuv",
+      "tuy",
+      "tvo",
+      "twu",
+      "txs",
+      "txy",
+      "uki",
+      "uzn",
+      "vai",
+      "ver",
+      "vmc",
+      "vmj",
+      "vmm",
+      "vmp",
+      "vmz",
+      "vro",
+      "wci",
+      "weo",
+      "wja",
+      "wji",
+      "wof",
+      "xmv",
+      "xmw",
+      "xpe",
+      "xti",
+      "xtu",
+      "yay",
+      "ydd",
+      "yer",
+      "yes",
+      "zga",
+      "zoh",
+      "zor",
+      "zpv",
+      "zpy",
+      "ztg",
+      "ztn",
+      "ztp",
+      "zts",
+      "ztu"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "m-aliabbas/idrak_ryanspeech",
+    "author": "m-aliabbas",
+    "trendingScore": 0,
+    "downloads": 14,
+    "likes": 1,
+    "lastModified": "2022-12-07T07:22:24.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "madhabpaul/assamese_speech_corpus",
+    "author": "madhabpaul",
+    "trendingScore": 0,
+    "downloads": 150,
+    "likes": 4,
+    "lastModified": "2024-06-06T07:51:10.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-audio",
+      "text-to-speech"
+    ],
+    "language": [
+      "as"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "matrixdose/WaxalNLP",
+    "author": "matrixdose",
+    "trendingScore": 0,
+    "downloads": 4493,
+    "likes": 0,
+    "lastModified": "2026-05-21T20:48:47.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "bau",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "pcm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "mbazaNLP/kinyarwanda-tts-dataset",
+    "author": "mbazaNLP",
+    "trendingScore": 0,
+    "downloads": 83,
+    "likes": 5,
+    "lastModified": "2023-06-27T08:09:28.000Z",
+    "task_categories": [],
+    "language": [
+      "rw"
+    ],
+    "gated": "auto",
+    "suitability": "keyword"
+  },
+  {
+    "id": "mesolitica/Azure-TTS-annotated",
+    "author": "mesolitica",
+    "trendingScore": 0,
+    "downloads": 552,
+    "likes": 0,
+    "lastModified": "2024-09-18T05:38:10.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "mesolitica/IMDA-TTS",
+    "author": "mesolitica",
+    "trendingScore": 0,
+    "downloads": 77,
+    "likes": 2,
+    "lastModified": "2024-01-01T04:16:32.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "miaocongxin/KeSpeech",
+    "author": "miaocongxin",
+    "trendingScore": 0,
+    "downloads": 43,
+    "likes": 0,
+    "lastModified": "2026-02-05T07:50:31.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "michsethowusu/yoruba-speech-text-parallel",
+    "author": "michsethowusu",
+    "trendingScore": 0,
+    "downloads": 179,
+    "likes": 2,
+    "lastModified": "2025-06-27T16:01:48.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "yo"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "micsell/hebrew_speech_kan_nikud",
+    "author": "micsell",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2024-02-02T21:51:30.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "mikelalda/basque_speech_dataset",
+    "author": "mikelalda",
+    "trendingScore": 0,
+    "downloads": 6,
+    "likes": 0,
+    "lastModified": "2025-10-22T12:08:56.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "momina02/OutteTTS-urdu-dataset",
+    "author": "momina02",
+    "trendingScore": 0,
+    "downloads": 28,
+    "likes": 2,
+    "lastModified": "2025-07-16T09:06:26.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "mrmuminov/uzbek_voice",
+    "author": "mrmuminov",
+    "trendingScore": 0,
+    "downloads": 868,
+    "likes": 1,
+    "lastModified": "2024-10-30T14:35:54.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "murodbek/uzbek-speech-corpus",
+    "author": "murodbek",
+    "trendingScore": 0,
+    "downloads": 615,
+    "likes": 4,
+    "lastModified": "2025-01-24T06:40:23.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "uz"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "naijavoices/naijavoices-dataset",
+    "author": "naijavoices",
+    "trendingScore": 0,
+    "downloads": 1435,
+    "likes": 21,
+    "lastModified": "2025-08-07T00:31:48.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": "auto",
+    "suitability": "keyword"
+  },
+  {
+    "id": "nampdn-ai/vietspeech",
+    "author": "nampdn-ai",
+    "trendingScore": 0,
+    "downloads": 307,
+    "likes": 3,
+    "lastModified": "2026-05-12T23:22:08.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "ngoloan/WaxalNLP",
+    "author": "ngoloan",
+    "trendingScore": 0,
+    "downloads": 8538,
+    "likes": 0,
+    "lastModified": "2026-02-21T02:31:02.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "nicsaurabhsharma/punjabi-asr",
+    "author": "nicsaurabhsharma",
+    "trendingScore": 0,
+    "downloads": 98,
+    "likes": 0,
+    "lastModified": "2025-12-15T08:57:36.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "pa"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "novelwolde36/WaxalNLP",
+    "author": "novelwolde36",
+    "trendingScore": 0,
+    "downloads": 6749,
+    "likes": 1,
+    "lastModified": "2026-02-19T20:27:47.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ach",
+      "aka",
+      "amh",
+      "dag",
+      "dga",
+      "ewe",
+      "fat",
+      "ful",
+      "hau",
+      "ibo",
+      "kik",
+      "kpo",
+      "lin",
+      "lug",
+      "luo",
+      "mas",
+      "mlg",
+      "nyn",
+      "orm",
+      "sid",
+      "sna",
+      "sog",
+      "swa",
+      "tir",
+      "twi",
+      "wal",
+      "yor"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "okezieowen/afrispeech_afrikaans",
+    "author": "okezieowen",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2025-10-11T23:55:47.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "openpecha/tibetan_voice",
+    "author": "openpecha",
+    "trendingScore": 0,
+    "downloads": 153,
+    "likes": 5,
+    "lastModified": "2023-05-15T05:41:32.000Z",
+    "task_categories": [],
+    "language": [
+      "bo"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "parambharat/ucla_dataset",
+    "author": "parambharat",
+    "trendingScore": 0,
+    "downloads": 10,
+    "likes": 2,
+    "lastModified": "2022-12-05T08:46:24.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ta"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "parler-tts/libritts_r_filtered",
+    "author": "parler-tts",
+    "trendingScore": 0,
+    "downloads": 3034,
+    "likes": 22,
+    "lastModified": "2024-08-06T16:45:54.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "phongps2/VietSpeech",
+    "author": "phongps2",
+    "trendingScore": 0,
+    "downloads": 1,
+    "likes": 0,
+    "lastModified": "2025-05-04T03:14:14.000Z",
+    "task_categories": [
+      "text-generation"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": "manual",
+    "suitability": "keyword"
+  },
+  {
+    "id": "pklumpp/CommonPhoneDataset",
+    "author": "pklumpp",
+    "trendingScore": 1,
+    "downloads": 257,
+    "likes": 3,
+    "lastModified": "2025-10-29T09:27:09.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "en",
+      "de",
+      "fr",
+      "it",
+      "ru",
+      "es"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "pnnbao-ump/VieNeu-TTS-140h",
+    "author": "pnnbao-ump",
+    "trendingScore": 0,
+    "downloads": 363,
+    "likes": 28,
+    "lastModified": "2026-05-31T05:55:32.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "pnnbao-ump/ngochuyen_voice",
+    "author": "pnnbao-ump",
+    "trendingScore": 0,
+    "downloads": 323,
+    "likes": 6,
+    "lastModified": "2026-01-06T10:40:21.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "pujanpaudel/nepali_speech_to_text",
+    "author": "pujanpaudel",
+    "trendingScore": 0,
+    "downloads": 77,
+    "likes": 1,
+    "lastModified": "2025-03-09T11:40:27.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ne"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "rAVEUK/genshin-voice",
+    "author": "rAVEUK",
+    "trendingScore": 0,
+    "downloads": 197,
+    "likes": 1,
+    "lastModified": "2026-03-23T10:02:56.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en",
+      "ja",
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "reach-vb/jenny_tts_dataset",
+    "author": "reach-vb",
+    "trendingScore": 1,
+    "downloads": 358,
+    "likes": 36,
+    "lastModified": "2024-01-09T14:11:57.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "reesjon9/Latin-Audio",
+    "author": "reesjon9",
+    "trendingScore": 0,
+    "downloads": 43,
+    "likes": 0,
+    "lastModified": "2025-12-17T15:44:38.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "la"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "saeedzou/PersianVox_NM",
+    "author": "saeedzou",
+    "trendingScore": 0,
+    "downloads": 6,
+    "likes": 5,
+    "lastModified": "2025-09-21T09:23:24.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "fa"
+    ],
+    "gated": "manual",
+    "suitability": "strong"
+  },
+  {
+    "id": "sarahwei/Taiwanese-Minnan-Sutiau",
+    "author": "sarahwei",
+    "trendingScore": 0,
+    "downloads": 394,
+    "likes": 15,
+    "lastModified": "2024-10-24T08:39:22.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "nan"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "sarulab-speech/commonvoice22_sidon",
+    "author": "sarulab-speech",
+    "trendingScore": 1,
+    "downloads": 156,
+    "likes": 30,
+    "lastModified": "2025-10-08T15:58:01.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "ab",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "ast",
+      "az",
+      "ba",
+      "bas",
+      "be",
+      "bg",
+      "bn",
+      "br",
+      "ca",
+      "ckb",
+      "cnh",
+      "cs",
+      "cv",
+      "cy",
+      "da",
+      "dav",
+      "de",
+      "dv",
+      "dyu",
+      "el",
+      "en",
+      "eo",
+      "es",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fy",
+      "ga",
+      "gl",
+      "gn",
+      "ha",
+      "he",
+      "hi",
+      "hsb",
+      "ht",
+      "hu",
+      "hy",
+      "ia",
+      "id",
+      "ig",
+      "is",
+      "it",
+      "ja",
+      "ka",
+      "kab",
+      "kk",
+      "kln",
+      "kmr",
+      "ko",
+      "ky",
+      "lg",
+      "lij",
+      "lo",
+      "lt",
+      "ltg",
+      "luo",
+      "lv",
+      "mdf",
+      "mhr",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "mrj",
+      "mt",
+      "myv",
+      "nan",
+      "nb",
+      "ne",
+      "nhi",
+      "nl",
+      "nn",
+      "nr",
+      "nso",
+      "oc",
+      "or",
+      "os",
+      "pa",
+      "pl",
+      "ps",
+      "pt",
+      "quy",
+      "rm",
+      "ro",
+      "ru",
+      "rup",
+      "rw",
+      "sah",
+      "sat",
+      "sc",
+      "sd",
+      "sk",
+      "skr",
+      "sl",
+      "sq",
+      "sr",
+      "st",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "tg",
+      "th",
+      "ti",
+      "tig",
+      "tk",
+      "tn",
+      "tok",
+      "tr",
+      "ts",
+      "tt",
+      "tw",
+      "ug",
+      "uk",
+      "ur",
+      "uz",
+      "ve",
+      "vi",
+      "vot",
+      "xh",
+      "yi",
+      "yo",
+      "yue",
+      "zgh",
+      "zh",
+      "zu",
+      "zza"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "schalor/NepaliONE-tts",
+    "author": "schalor",
+    "trendingScore": 0,
+    "downloads": 32,
+    "likes": 0,
+    "lastModified": "2025-11-13T07:03:07.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shangeth/expresso",
+    "author": "shangeth",
+    "trendingScore": 0,
+    "downloads": 573,
+    "likes": 0,
+    "lastModified": "2026-05-03T12:18:03.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "shb777/gemini-flash-2.0-speech",
+    "author": "shb777",
+    "trendingScore": 0,
+    "downloads": 248,
+    "likes": 59,
+    "lastModified": "2025-06-26T16:10:08.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "shenberg1/aishell3",
+    "author": "shenberg1",
+    "trendingScore": 0,
+    "downloads": 114,
+    "likes": 5,
+    "lastModified": "2023-12-05T23:14:33.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "shunyalabs/afrikaans-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 13,
+    "likes": 0,
+    "lastModified": "2025-08-24T14:04:04.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/amharic-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 233,
+    "likes": 1,
+    "lastModified": "2025-08-24T16:47:26.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/armenian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-08-25T13:31:31.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/azerbaijani-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 5,
+    "likes": 1,
+    "lastModified": "2025-08-25T08:36:15.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/belarusian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 2,
+    "likes": 1,
+    "lastModified": "2025-08-25T09:13:18.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/catalan-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-08-25T09:22:25.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/danish-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 8,
+    "likes": 1,
+    "lastModified": "2025-08-25T09:31:25.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/estonian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2025-08-25T09:44:26.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/galician-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-08-25T10:15:45.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/hebrew-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2025-08-25T10:22:26.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/hungarian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2025-08-25T13:29:32.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/icelandic-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2025-08-25T14:14:37.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/kazakh-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 5,
+    "likes": 0,
+    "lastModified": "2025-08-25T15:04:20.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/lao-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 144,
+    "likes": 1,
+    "lastModified": "2025-08-25T15:33:50.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/latvian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 60,
+    "likes": 0,
+    "lastModified": "2025-08-25T15:39:10.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/lithuanian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 2,
+    "lastModified": "2025-08-25T15:36:51.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/macedonian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 21,
+    "likes": 0,
+    "lastModified": "2025-08-25T15:48:05.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/malayalam-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 248,
+    "likes": 1,
+    "lastModified": "2025-08-25T10:20:49.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/maltese-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 30,
+    "likes": 0,
+    "lastModified": "2025-08-25T15:57:39.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/marathi-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 0,
+    "lastModified": "2025-08-25T10:00:53.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/norwegian-nynorsk-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 34,
+    "likes": 0,
+    "lastModified": "2025-08-25T16:07:04.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/occitan-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2025-08-25T16:13:22.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/persian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 7,
+    "likes": 0,
+    "lastModified": "2025-08-25T10:07:21.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/serbian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 45,
+    "likes": 0,
+    "lastModified": "2025-08-25T16:37:09.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/slovak-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 55,
+    "likes": 0,
+    "lastModified": "2025-08-25T16:24:05.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/slovenian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2025-08-25T16:26:34.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/tajik-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 36,
+    "likes": 0,
+    "lastModified": "2025-08-25T16:43:40.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/tamil-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 1490,
+    "likes": 0,
+    "lastModified": "2025-08-25T09:29:00.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/ukrainian-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 95,
+    "likes": 0,
+    "lastModified": "2025-08-25T17:00:20.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "shunyalabs/welsh-speech-dataset",
+    "author": "shunyalabs",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-08-25T09:28:50.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "siddiqiya/ar-quran-hadith14books-MSA",
+    "author": "siddiqiya",
+    "trendingScore": 0,
+    "downloads": 161,
+    "likes": 6,
+    "lastModified": "2025-05-27T20:43:43.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "simon3000/genshin-voice",
+    "author": "simon3000",
+    "trendingScore": 0,
+    "downloads": 6500,
+    "likes": 235,
+    "lastModified": "2025-04-22T03:19:19.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en",
+      "ja",
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "snowfungo/genshin-voice",
+    "author": "snowfungo",
+    "trendingScore": 0,
+    "downloads": 198,
+    "likes": 0,
+    "lastModified": "2026-05-31T02:58:28.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en",
+      "ja",
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "speech-uk/opentts-lada",
+    "author": "speech-uk",
+    "trendingScore": 0,
+    "downloads": 48,
+    "likes": 2,
+    "lastModified": "2025-02-24T23:55:43.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "uk"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "speech31/zeroth_korean_ipa",
+    "author": "speech31",
+    "trendingScore": 0,
+    "downloads": 4,
+    "likes": 1,
+    "lastModified": "2024-02-21T21:47:03.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": "auto",
+    "suitability": "keyword"
+  },
+  {
+    "id": "sumdigger/genshin-voice",
+    "author": "sumdigger",
+    "trendingScore": 0,
+    "downloads": 10,
+    "likes": 0,
+    "lastModified": "2026-01-12T19:31:20.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "zh",
+      "en",
+      "ja",
+      "ko"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "superfish1021/lao-speech-dataset",
+    "author": "superfish1021",
+    "trendingScore": 0,
+    "downloads": 16,
+    "likes": 0,
+    "lastModified": "2026-03-31T09:50:35.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "taresh18/AnimeVox",
+    "author": "taresh18",
+    "trendingScore": 1,
+    "downloads": 280,
+    "likes": 38,
+    "lastModified": "2025-05-27T18:26:55.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "tarteel-ai/everyayah",
+    "author": "tarteel-ai",
+    "trendingScore": 1,
+    "downloads": 1615,
+    "likes": 36,
+    "lastModified": "2022-12-09T19:33:08.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ar"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "test12313/Japanese-Eroge-Voice",
+    "author": "test12313",
+    "trendingScore": 0,
+    "downloads": 333,
+    "likes": 0,
+    "lastModified": "2025-12-26T15:00:36.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ],
+    "language": [
+      "ja"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "thanhhieu2004/vivos-vie-speech2text",
+    "author": "thanhhieu2004",
+    "trendingScore": 0,
+    "downloads": 41,
+    "likes": 0,
+    "lastModified": "2026-05-28T09:28:02.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "thetaone-ai/HiKE",
+    "author": "thetaone-ai",
+    "trendingScore": 0,
+    "downloads": 118,
+    "likes": 3,
+    "lastModified": "2026-04-13T02:00:07.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ko",
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "thivux/phoaudiobook",
+    "author": "thivux",
+    "trendingScore": 1,
+    "downloads": 1341,
+    "likes": 44,
+    "lastModified": "2026-01-01T03:52:48.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "ticchien/dataset-vietvoice-v2",
+    "author": "ticchien",
+    "trendingScore": 0,
+    "downloads": 186,
+    "likes": 0,
+    "lastModified": "2025-12-07T08:24:13.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "ticchien/dataset-vietvoice_v2",
+    "author": "ticchien",
+    "trendingScore": 0,
+    "downloads": 47,
+    "likes": 0,
+    "lastModified": "2025-12-16T02:42:41.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "ughurabbasov/azerbaijani-tts-dataset",
+    "author": "ughurabbasov",
+    "trendingScore": 0,
+    "downloads": 10,
+    "likes": 0,
+    "lastModified": "2026-02-20T09:51:33.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "upb-nlp/echo",
+    "author": "upb-nlp",
+    "trendingScore": 0,
+    "downloads": 80,
+    "likes": 3,
+    "lastModified": "2024-06-27T08:06:05.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "ro"
+    ],
+    "gated": "auto",
+    "suitability": "strong"
+  },
+  {
+    "id": "urarik/aishell3",
+    "author": "urarik",
+    "trendingScore": 0,
+    "downloads": 236,
+    "likes": 1,
+    "lastModified": "2026-05-19T05:55:35.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "zh"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "vidhigrwl/assamese-tts-train",
+    "author": "vidhigrwl",
+    "trendingScore": 0,
+    "downloads": 3,
+    "likes": 0,
+    "lastModified": "2025-06-01T22:24:38.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "voice-biomarkers/openslr-140-hq-Kazakh",
+    "author": "voice-biomarkers",
+    "trendingScore": 0,
+    "downloads": 494,
+    "likes": 4,
+    "lastModified": "2024-08-23T17:22:40.000Z",
+    "task_categories": [],
+    "language": [
+      "kk"
+    ],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "vuhoanhuy/dataset-vietvoice_v2",
+    "author": "vuhoanhuy",
+    "trendingScore": 0,
+    "downloads": 130,
+    "likes": 0,
+    "lastModified": "2026-01-08T07:04:33.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "xDre4m524/ngochuyen_voice",
+    "author": "xDre4m524",
+    "trendingScore": 0,
+    "downloads": 15,
+    "likes": 0,
+    "lastModified": "2026-03-31T09:02:11.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "vi"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "xtz999/ClArTTS",
+    "author": "xtz999",
+    "trendingScore": 0,
+    "downloads": 23,
+    "likes": 0,
+    "lastModified": "2026-05-13T17:34:25.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  },
+  {
+    "id": "yeshpanovrustem/kazakh_songs_asr",
+    "author": "yeshpanovrustem",
+    "trendingScore": 0,
+    "downloads": 13,
+    "likes": 3,
+    "lastModified": "2026-05-14T02:33:39.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "kk"
+    ],
+    "gated": "manual",
+    "suitability": "strong"
+  },
+  {
+    "id": "yeshpanovrustem/kazlibri",
+    "author": "yeshpanovrustem",
+    "trendingScore": 0,
+    "downloads": 13,
+    "likes": 1,
+    "lastModified": "2026-03-28T02:33:00.000Z",
+    "task_categories": [
+      "automatic-speech-recognition"
+    ],
+    "language": [
+      "kk"
+    ],
+    "gated": "manual",
+    "suitability": "strong"
+  },
+  {
+    "id": "yhaha/EmoVoice-DB",
+    "author": "yhaha",
+    "trendingScore": 0,
+    "downloads": 198,
+    "likes": 25,
+    "lastModified": "2026-03-27T04:21:50.000Z",
+    "task_categories": [
+      "text-to-speech"
+    ],
+    "language": [
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ylacombe/cml-tts",
+    "author": "ylacombe",
+    "trendingScore": 1,
+    "downloads": 39153,
+    "likes": 35,
+    "lastModified": "2023-11-24T14:48:29.000Z",
+    "task_categories": [
+      "text-to-audio",
+      "text-to-speech"
+    ],
+    "language": [
+      "nl",
+      "fr",
+      "de",
+      "it",
+      "pl",
+      "pt",
+      "es"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "ymoslem/Wikimedia-Speech-Irish",
+    "author": "ymoslem",
+    "trendingScore": 0,
+    "downloads": 89,
+    "likes": 4,
+    "lastModified": "2024-07-02T05:21:41.000Z",
+    "task_categories": [
+      "automatic-speech-recognition",
+      "text-to-speech",
+      "translation"
+    ],
+    "language": [
+      "ga",
+      "en"
+    ],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "yskim3271/vibravox_16k",
+    "author": "yskim3271",
+    "trendingScore": 0,
+    "downloads": 172,
+    "likes": 0,
+    "lastModified": "2026-05-02T10:28:38.000Z",
+    "task_categories": [
+      "audio-classification",
+      "automatic-speech-recognition"
+    ],
+    "language": [],
+    "gated": false,
+    "suitability": "strong"
+  },
+  {
+    "id": "zsy12345/telugu-asr",
+    "author": "zsy12345",
+    "trendingScore": 0,
+    "downloads": 448,
+    "likes": 2,
+    "lastModified": "2023-12-01T19:10:04.000Z",
+    "task_categories": [],
+    "language": [],
+    "gated": false,
+    "suitability": "keyword"
+  }
+]

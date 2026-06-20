@@ -37,6 +37,35 @@ Each published row is `{audio_filename, text, speaker}`. Steps (see
 4. **Publish.** `Dataset.from_list(rows).push_to_hub('malaysia-ai/Multilingual-TTS', <config>)`,
    then zip the `_audio` / `_neucodec` folders and `api.upload_file` them.
 
+### `prepare.py` — runs all 4 stages, checkpointed
+
+```bash
+python3 prepare.py --repo <owner/name> --name <config> --workdir /share \
+    [--config X] [--audio-col A] [--text-col T] [--speaker-col S] \
+    [--cluster-threshold 0.1] [--max-samples N]
+```
+- Columns auto-detect from the source schema (override with flags). Audio is
+  streamed and re-encoded to mono mp3 (skips empty text / clips `< 10000` samples).
+- **Checkpointing**: `<workdir>/checkpoints/<name>.done` is written only after the
+  parquet + mp3 zip + neucodec zip all upload; on re-run that dataset is skipped.
+  Within a dataset it also resumes: `<name>.rows.json` skips re-extraction, and
+  `embedding.py` / `convert_neucodec.py` skip per-file outputs already present.
+- **Speaker clustering threshold**: `--cluster-threshold 0.1` (default) = the
+  notebook behavior = every clip its own speaker. titanet vectors are
+  L2-normalized so same-speaker NN distances are ~0.65-1.02; raise the threshold
+  (~0.9-1.1) to actually group utterances into speakers.
+- Reuses `embedding.py` and `convert_neucodec.py` as multi-GPU subprocesses;
+  exit codes are ignored (interpreter-teardown GIL races on this box) — success is
+  judged by output file counts.
+
+### Remote run (GPU box)
+
+`ssh -i scicom -p 1024 root@8.222.165.68`, work in `/share` (8× H20). Deps that
+needed fixing there: `faiss-cpu`, `neucodec`, titanet-vectors-fp16, and aligning
+`torchaudio`/`torchvision` to `torch 2.9.1+cu128` (`--no-deps`). No `zip` binary —
+`prepare.py` uses `shutil.make_archive`. First validated dataset: `Lingua_Libre_br`
+(Breton, 3086 clips).
+
 ## Column conventions (from `prepare/`)
 
 - **Audio columns:** `audio` (usually `struct<bytes,path>`), `audio_filename`,

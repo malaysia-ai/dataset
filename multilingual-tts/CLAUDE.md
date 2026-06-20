@@ -50,6 +50,9 @@ python3 prepare.py --repo <owner/name> --name <config> --workdir /share \
   parquet + mp3 zip + neucodec zip all upload; on re-run that dataset is skipped.
   Within a dataset it also resumes: `<name>.rows.json` skips re-extraction, and
   `embedding.py` / `convert_neucodec.py` skip per-file outputs already present.
+- **Auto-cleanup**: after a successful push, local mp3/token/embedding/zip/json
+  artifacts are deleted (only the `.done` checkpoint is kept) so `/share` doesn't
+  fill up across a batch. Pass `--keep-local` to retain them.
 - **Speaker clustering threshold**: `--cluster-threshold 0.1` (default) = the
   notebook behavior = every clip its own speaker. titanet vectors are
   L2-normalized so same-speaker NN distances are ~0.65-1.02; raise the threshold

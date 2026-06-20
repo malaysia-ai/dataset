@@ -230,6 +230,29 @@ def stage_push(name, rows, repo_src, config):
                         repo_id=HF_REPO, repo_type="dataset")
 
 
+def stage_cleanup(name):
+    """Delete local artifacts after a successful push (keep the checkpoint).
+    Essential for batch runs so /share does not fill up."""
+    import shutil
+    targets = [f"{name}_audio", f"{name}_audio_neucodec", f"{name}.rows_embedding",
+               f"{name}_audio.zip", f"{name}_audio_neucodec.zip",
+               f"{name}.rows.json", f"{name}-audio.json"]
+    freed = 0
+    for t in targets:
+        if os.path.isdir(t):
+            for dp, _, fns in os.walk(t):
+                for fn in fns:
+                    try: freed += os.path.getsize(os.path.join(dp, fn))
+                    except OSError: pass
+            shutil.rmtree(t, ignore_errors=True)
+        elif os.path.exists(t):
+            try: freed += os.path.getsize(t)
+            except OSError: pass
+            try: os.remove(t)
+            except OSError: pass
+    print(f"[cleanup] removed local artifacts (~{freed/1e6:.0f} MB freed)")
+
+
 @click.command()
 @click.option("--repo", required=True, help="source HF dataset id")
 @click.option("--name", required=True, help="output config name in Multilingual-TTS")
@@ -243,8 +266,10 @@ def stage_push(name, rows, repo_src, config):
                    "(0.1 = per-utterance unique, notebook default; titanet vectors "
                    "are L2-normalized, NN distances ~0.65-1.02 so raise to group)")
 @click.option("--workdir", default=".", help="where audio/token folders are written")
+@click.option("--keep-local", is_flag=True, default=False,
+              help="keep local mp3/token/embedding artifacts after push (default: delete)")
 def main(repo, name, config, audio_col, text_col, speaker_col, max_samples,
-         cluster_threshold, workdir):
+         cluster_threshold, workdir, keep_local):
     os.chdir(workdir)
     done = os.path.join(ckpt_dir(workdir), f"{name}.done")
     if os.path.exists(done):
@@ -271,6 +296,8 @@ def main(repo, name, config, audio_col, text_col, speaker_col, max_samples,
                "seconds": round(time.time() - t0, 1)},
               open(done, "w"), indent=2)
     print(f"[done] {name}: {len(rows)} rows in {time.time()-t0:.0f}s -> checkpoint {done}")
+    if not keep_local:
+        stage_cleanup(name)
 
 
 if __name__ == "__main__":

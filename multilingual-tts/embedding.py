@@ -7,6 +7,12 @@ from tqdm import tqdm
 from multiprocess import Pool
 import os
 
+# Speaker embeddings now come from titanet-vectors-fp16 (NOT malaya-speech):
+#   pip3 install git+https://github.com/Scicom-AI-Enterprise-Organization/titanet-vectors-fp16
+# Same TitaNet-L weights as before (huseinzol05/nemo-titanet_large), run in fp16.
+# Output is unchanged: one 192-d .npy per row, L2-normalized so the greedy faiss
+# IndexFlatL2 clustering (cluster-*.ipynb, threshold ~0.1) keeps working as-is.
+
 def chunks(l, devices, folder):
     chunk_size = len(l) // len(devices)
     remainder = len(l) % len(devices)
@@ -22,19 +28,28 @@ def loop(rows):
     os.environ['CUDA_VISIBLE_DEVICES'] = str(index)
 
     import torch
-    import torchaudio
-    import malaya_speech
+    import librosa
+    from titanet_vectors import load
 
-    model = malaya_speech.speaker_vector.nemo('huseinzol05/nemo-titanet_large').cuda()
-    _ = model.eval()
-    with torch.no_grad():
-        for row in tqdm(rows, desc = f'loop {index}'):
-            no, row = row
-            new_f = os.path.join(folder, f'{no}.npy')
-            if os.path.exists(new_f):
-                continue
-            e = model([malaya_speech.load(row['audio_filename'])[0]])
-            np.save(new_f, e[0], allow_pickle=True)
+    torch.autograd.set_grad_enabled(False)
+    model = load('huseinzol05/nemo-titanet_large').cuda().eval()
+    model = model.to(torch.float16)
+
+    for row in tqdm(rows, desc = f'loop {index}'):
+        no, row = row
+        new_f = os.path.join(folder, f'{no}.npy')
+        if os.path.exists(new_f):
+            continue
+        try:
+            y, sr = librosa.load(row['audio_filename'], sr = 16000)
+            x = torch.from_numpy(y).float().unsqueeze(0).cuda().half()
+            lengths = torch.tensor([x.shape[-1]], device = x.device)
+            _, embs = model(x, lengths)
+            e = embs[0].float().cpu().numpy()
+            e = e / (np.linalg.norm(e) + 1e-9)
+            np.save(new_f, e, allow_pickle=True)
+        except Exception as ex:
+            print(ex)
 
 @click.command()
 @click.option('--file')
@@ -64,4 +79,3 @@ def main(file, replication):
 
 if __name__ == '__main__':
     main()
-

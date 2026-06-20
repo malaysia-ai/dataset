@@ -10,6 +10,33 @@ https://huggingface.co/datasets/malaysia-ai/Multilingual-TTS.
   cleanup utilities.
 - `discover/` — pipeline that finds **new** HF audio datasets to add (see below).
 
+## Prepare pipeline (adding a source dataset)
+
+Each published row is `{audio_filename, text, speaker}`. Steps (see
+`prepare/prepare-indicTTS.ipynb` as the canonical example):
+
+1. **Extract audio → mp3** to save storage. Read the source parquet, decode
+   `audio['bytes']`, downmix to mono, **skip** empty text (`len < 2`) and very
+   short clips (`< 10000` samples), write `<dataset>_audio/<shard>_<i>.mp3`.
+2. **Speaker label.**
+   - If the source has a speaker/gender column, use it (e.g. `f"{base}_{gender}"`).
+   - Otherwise **cluster**: `embedding.py` extracts a 192-d TitaNet speaker vector
+     per row → greedy online clustering with faiss `IndexFlatL2(192)`,
+     `assign(x, threshold=0.1)` (see `prepare/cluster-*.ipynb`), then append the
+     cluster id to the speaker label.
+   - `embedding.py` uses **titanet-vectors-fp16**, NOT malaya-speech:
+     `pip3 install git+https://github.com/Scicom-AI-Enterprise-Organization/titanet-vectors-fp16`
+     — `model = load('huseinzol05/nemo-titanet_large').cuda().eval().to(torch.float16)`,
+     then `logits, embs = model(wav[1,N].half(), lengths)`; `embs[0]` is the 192-d
+     vector (L2-normalized before saving so the threshold stays valid). Audio is
+     loaded with `librosa.load(path, sr=16000)`. Output is one `<file>_embedding/<i>.npy`
+     per row — unchanged from before, so `cluster-*.ipynb` works as-is.
+3. **Audio tokens (neucodec).** `convert_neucodec.py --file <audio-list>.json`:
+   `librosa.load(f, sr=16000)`, **skip** clips `> 20s`, `NeuCodec.encode_code` →
+   token list saved as `<folder>_neucodec/<...>.json`.
+4. **Publish.** `Dataset.from_list(rows).push_to_hub('malaysia-ai/Multilingual-TTS', <config>)`,
+   then zip the `_audio` / `_neucodec` folders and `api.upload_file` them.
+
 ## Column conventions (from `prepare/`)
 
 - **Audio columns:** `audio` (usually `struct<bytes,path>`), `audio_filename`,

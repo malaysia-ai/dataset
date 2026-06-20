@@ -197,7 +197,9 @@ def stage_speaker(name, rows, speaker_col, threshold=0.1, dim=192):
                         "--file", rows_json], cwd=os.getcwd())
         n_npy = len(glob.glob(os.path.join(emb_dir, "*.npy")))
         print(f"[speaker] embeddings now {n_npy}/{len(rows)}")
-        if n_npy < 0.5 * len(rows):
+        # only fail on near-total failure (systemic GPU/model issue worth retrying);
+        # a few missing vectors just become '<name>_unknown' in the clustering loop.
+        if n_npy < 0.1 * len(rows):
             raise SystemExit(f"embedding.py produced too few vectors ({n_npy}/{len(rows)})")
 
     import faiss

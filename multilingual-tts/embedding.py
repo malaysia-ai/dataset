@@ -44,6 +44,10 @@ def loop(rows):
             continue
         try:
             y, sr = librosa.load(row['audio_filename'], sr = 16000)
+            # cap to 30s: a speaker vector needs only a few seconds, and an
+            # uncapped long clip spikes titanet activations to tens of GB -> OOM
+            if len(y) > 30 * 16000:
+                y = y[:30 * 16000]
             x = torch.from_numpy(y).float().unsqueeze(0).cuda().half()
             lengths = torch.tensor([x.shape[-1]], device = x.device)
             _, embs = model(x, lengths)

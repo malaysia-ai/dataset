@@ -244,14 +244,57 @@ def stage_neucodec(name, n_rows):
     return n
 
 
-def zip_dir(folder):
-    import shutil
-    z = f"{folder}.zip"
-    if os.path.exists(z):
-        os.remove(z)
-    # pure-python zip (no external `zip` binary dependency)
-    shutil.make_archive(folder, "zip", root_dir=".", base_dir=folder)
-    return z
+PARTITION_SIZE = 5e9  # 5 GB per zip part
+
+
+def _upload_retry(api, path, repo, tries=12):
+    for k in range(tries):
+        try:
+            api.upload_file(path_or_fileobj=path, path_in_repo=path,
+                            repo_id=repo, repo_type="dataset")
+            return
+        except Exception as e:
+            print(f"[push] upload {path} failed ({type(e).__name__}: {str(e)[:80]}), "
+                  f"retry {k+1}/{tries} in 60s")
+            time.sleep(60)
+    raise RuntimeError(f"upload failed after {tries} tries: {path}")
+
+
+def upload_folder_chunked(api, folder, repo, partition_size=PARTITION_SIZE):
+    """Zip + upload a folder to HF. Small (<=5GB): one <folder>.zip. Large: split
+    into ~5GB parts <folder>-0-<part>.zip, zipping -> uploading -> deleting each
+    part incrementally so peak disk stays ~one part (needed for >50GB folders)."""
+    import zipfile
+    files = sorted(os.path.join(dp, fn)
+                   for dp, _, fns in os.walk(folder) for fn in fns)
+    if not files:
+        print(f"[push] {folder} empty, skip")
+        return
+    total = sum(os.path.getsize(f) for f in files)
+
+    def write_upload(part_files, zname):
+        with zipfile.ZipFile(zname, "w", zipfile.ZIP_STORED) as zf:
+            for f in part_files:
+                zf.write(f, arcname=f)  # keep relative path so audio_filename resolves
+        sz = os.path.getsize(zname)
+        _upload_retry(api, zname, repo)
+        os.remove(zname)
+        print(f"[push] uploaded {zname} ({sz/1e9:.2f} GB, {len(part_files)} files)")
+
+    if total <= partition_size:
+        write_upload(files, f"{folder}.zip")
+        return
+    part, cur, cur_sz = 0, [], 0
+    for f in files:
+        s = os.path.getsize(f)
+        if cur and cur_sz + s >= partition_size:
+            write_upload(cur, f"{folder}-0-{part}.zip")
+            part += 1
+            cur, cur_sz = [], 0
+        cur.append(f)
+        cur_sz += s
+    if cur:
+        write_upload(cur, f"{folder}-0-{part}.zip")
 
 
 def stage_push(name, rows, repo_src, config):
@@ -266,13 +309,7 @@ def stage_push(name, rows, repo_src, config):
         if not os.path.isdir(folder):
             print(f"[push] WARN missing {folder}, skip")
             continue
-        if not any(fns for _, _, fns in os.walk(folder)):
-            print(f"[push] {folder} empty, skip")
-            continue
-        z = zip_dir(folder)
-        print(f"[push] upload {z} ({os.path.getsize(z)/1e6:.1f} MB)")
-        api.upload_file(path_or_fileobj=z, path_in_repo=z,
-                        repo_id=HF_REPO, repo_type="dataset")
+        upload_folder_chunked(api, folder, HF_REPO)
 
 
 def stage_cleanup(name):

@@ -97,12 +97,63 @@ def free_gb(path="."):
     return shutil.disk_usage(path).free / 1e9
 
 
+def extract_shard(task):
+    """Worker process: decode + mono mp3-encode a set of row groups from one
+    parquet shard read directly over HfFileSystem. Returns row dicts."""
+    (repo, shard, rgs, rg_offset, audio_dir, name,
+     audio_col, text_col, speaker_col) = task
+    import os, soundfile as sf
+    import pyarrow.parquet as pq
+    from huggingface_hub import HfFileSystem
+    base = shard.replace("/", "-").replace(".parquet", "")
+    cols = [c for c in [audio_col, text_col, speaker_col] if c]
+    out = []
+    try:
+        fs = HfFileSystem()
+        with fs.open(f"datasets/{repo}/{shard}", "rb") as fh:
+            pf = pq.ParquetFile(fh)
+            gi = rg_offset
+            for rg in rgs:
+                d = pf.read_row_group(rg, columns=cols).to_pydict()
+                for i in range(len(d[audio_col])):
+                    idx = gi
+                    gi += 1
+                    try:
+                        text = d[text_col][i]
+                        text = text.strip() if isinstance(text, str) else ""
+                        if len(text) < 2:
+                            continue
+                        arr, sr = decode_audio(d[audio_col][i])
+                        if arr is None:
+                            continue
+                        if arr.ndim > 1:
+                            arr = arr.mean(axis=1)
+                        if arr.shape[0] < 10000:
+                            continue
+                        fn = os.path.join(audio_dir, f"{name}-{base}-{idx}.mp3")
+                        if not os.path.exists(fn):
+                            sf.write(fn, arr, sr)
+                        row = {"audio_filename": fn, "text": text}
+                        sp = d[speaker_col][i] if speaker_col else None
+                        if sp is not None:
+                            row["speaker"] = f"{name}_{sp}"
+                        out.append(row)
+                    except Exception:
+                        continue
+    except Exception as e:
+        print(f"[extract] shard {shard} rgs {rgs[:2]}.. failed: {type(e).__name__}: {str(e)[:80]}")
+    return out
+
+
 def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
-                  max_samples, min_free_gb=50):
-    """Stream source -> mp3 + rows json. Resumable via <name>.rows.json."""
-    import soundfile as sf
-    from datasets import (load_dataset, get_dataset_split_names,
-                          load_dataset_builder, Audio)
+                  max_samples, cores=16, min_free_gb=50):
+    """Parquet -> mono mp3, parallel across row groups (so even a single big shard
+    parallelizes). Resumable via <name>.rows.json; falls back to single-process
+    streaming if the repo has no parquet files."""
+    import pyarrow.parquet as pq
+    from datasets import load_dataset_builder, get_dataset_config_names
+    from huggingface_hub import HfApi, HfFileSystem
+    from multiprocess import Pool
 
     rows_json = f"{name}.rows.json"
     audio_list_json = f"{name}-audio.json"
@@ -117,7 +168,67 @@ def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
     print(f"[extract] cols -> audio={audio_col} text={text_col} speaker={speaker_col}")
     if not audio_col or not text_col:
         raise SystemExit(f"could not detect audio/text columns from {list(features)}")
+    audio_dir = f"{name}_audio"
+    os.makedirs(audio_dir, exist_ok=True)
 
+    parquet = sorted(f for f in HfApi().list_repo_files(repo, repo_type="dataset")
+                     if f.endswith(".parquet"))
+    try:
+        cfgs = get_dataset_config_names(repo)
+    except Exception:
+        cfgs = []
+    if len(cfgs) > 1:  # keep only this config's shards (best-effort by path)
+        filt = [f for f in parquet if config in f.split("/")] or \
+               [f for f in parquet if config in f]
+        if filt:
+            parquet = filt
+    if not parquet:
+        print("[extract] no parquet -> single-process streaming fallback")
+        return stage_extract_streaming(repo, config, name, audio_col, text_col,
+                                       speaker_col, max_samples, min_free_gb)
+
+    # build row-group-level tasks
+    fs = HfFileSystem()
+    shard_meta, total_rg = [], 0
+    for sh in parquet:
+        with fs.open(f"datasets/{repo}/{sh}", "rb") as fh:
+            pf = pq.ParquetFile(fh)
+            nrg = pf.num_row_groups
+            offs, cum = [], 0
+            for rg in range(nrg):
+                offs.append(cum)
+                cum += pf.metadata.row_group(rg).num_rows
+        shard_meta.append((sh, nrg, offs))
+        total_rg += nrg
+    chunk = max(1, total_rg // max(1, cores))
+    tasks = []
+    for sh, nrg, offs in shard_meta:
+        for start in range(0, nrg, chunk):
+            rgs = list(range(start, min(start + chunk, nrg)))
+            tasks.append((repo, sh, rgs, offs[rgs[0]], audio_dir, name,
+                          audio_col, text_col, speaker_col))
+    print(f"[extract] {len(parquet)} shards, {total_rg} row groups -> "
+          f"{len(tasks)} tasks on {min(cores, len(tasks))} workers")
+
+    with Pool(min(cores, len(tasks))) as pool:
+        results = pool.map(extract_shard, tasks)
+    rows = [r for sub in results for r in sub]
+    if max_samples:
+        rows = rows[:max_samples]
+    json.dump(rows, open(rows_json, "w"), ensure_ascii=False)
+    json.dump([r["audio_filename"] for r in rows], open(audio_list_json, "w"))
+    print(f"[extract] done: {len(rows)} clips -> {audio_dir}/")
+    return rows, speaker_col
+
+
+def stage_extract_streaming(repo, config, name, audio_col, text_col, speaker_col,
+                            max_samples, min_free_gb=50):
+    """Single-process streaming fallback for repos with no parquet files."""
+    import soundfile as sf
+    from datasets import load_dataset, get_dataset_split_names, Audio
+
+    rows_json = f"{name}.rows.json"
+    audio_list_json = f"{name}-audio.json"
     audio_dir = f"{name}_audio"
     os.makedirs(audio_dir, exist_ok=True)
     try:
@@ -351,6 +462,8 @@ def stage_cleanup(name):
 @click.option("--text-col", default=None)
 @click.option("--speaker-col", default=None)
 @click.option("--max-samples", default=None, type=int, help="cap clips (testing)")
+@click.option("--extract-cores", default=16, type=int,
+              help="parallel worker processes for the mp3 extract stage")
 @click.option("--cluster-threshold", default=0.1, type=float,
               help="L2 threshold for speaker clustering when no speaker column "
                    "(0.1 = per-utterance unique, notebook default; titanet vectors "
@@ -359,7 +472,7 @@ def stage_cleanup(name):
 @click.option("--keep-local", is_flag=True, default=False,
               help="keep local mp3/token/embedding artifacts after push (default: delete)")
 def main(repo, name, config, audio_col, text_col, speaker_col, max_samples,
-         cluster_threshold, workdir, keep_local):
+         extract_cores, cluster_threshold, workdir, keep_local):
     os.chdir(workdir)
     done = os.path.join(ckpt_dir(workdir), f"{name}.done")
     if os.path.exists(done):
@@ -375,7 +488,7 @@ def main(repo, name, config, audio_col, text_col, speaker_col, max_samples,
             print(f"[config] using '{config}' of {cfgs}")
 
         rows, speaker_col = stage_extract(repo, config, name, audio_col, text_col,
-                                          speaker_col, max_samples)
+                                          speaker_col, max_samples, cores=extract_cores)
         if not rows:
             raise SystemExit("no rows extracted")
         rows = stage_speaker(name, rows, speaker_col, threshold=cluster_threshold)

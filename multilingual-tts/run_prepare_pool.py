@@ -93,8 +93,10 @@ def record_failure(workdir, name, repo, gpu, rc, timed_out, logpath):
               help="kill a single dataset job after this many seconds (hang guard)")
 @click.option("--min-free-gb", default=30.0, type=float,
               help="only schedule a job onto a GPU with at least this much free VRAM")
+@click.option("--extract-cores", default=16, type=int,
+              help="parallel mp3-extract worker processes per dataset job")
 def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshold,
-         job_timeout, min_free_gb):
+         job_timeout, min_free_gb, extract_cores):
     if gpus is None:
         import torch
         gpus = [str(i) for i in range(torch.cuda.device_count())]
@@ -132,7 +134,8 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
         env = dict(os.environ, CUDA_VISIBLE_DEVICES=gpu)
         cmd = [sys.executable, "-u", os.path.join(HERE, "prepare.py"),
                "--repo", repo, "--name", name, "--workdir", workdir,
-               "--cluster-threshold", str(cluster_threshold)]
+               "--cluster-threshold", str(cluster_threshold),
+               "--extract-cores", str(extract_cores)]
         if max_samples:
             cmd += ["--max-samples", str(max_samples)]
         logpath = os.path.join(logdir, f"{name}.log")

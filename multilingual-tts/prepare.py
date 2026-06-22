@@ -156,7 +156,8 @@ def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
                 if arr.shape[0] < 10000:
                     continue
                 fn = os.path.join(audio_dir, f"{name}-{split}-{idx}.mp3")
-                sf.write(fn, arr, sr)
+                if not os.path.exists(fn):      # resume: skip re-encoding existing mp3
+                    sf.write(fn, arr, sr)
                 row = {"audio_filename": fn, "text": text}
                 if speaker_col and ex.get(speaker_col) is not None:
                     row["speaker"] = f"{name}_{ex[speaker_col]}"

@@ -130,7 +130,7 @@ def main(list_file, workers, gpus, workdir, limit, max_samples, cluster_threshol
 
     def launch(repo, name, gpu):
         env = dict(os.environ, CUDA_VISIBLE_DEVICES=gpu)
-        cmd = [sys.executable, os.path.join(HERE, "prepare.py"),
+        cmd = [sys.executable, "-u", os.path.join(HERE, "prepare.py"),
                "--repo", repo, "--name", name, "--workdir", workdir,
                "--cluster-threshold", str(cluster_threshold)]
         if max_samples:

@@ -21,6 +21,9 @@ import os, io, sys, json, time, glob, subprocess, traceback
 import numpy as np
 import click
 
+# Xet stalls HfFileSystem parquet reads from China-region nodes; classic CDN is fast.
+os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
+
 HF_REPO = "malaysia-ai/Multilingual-TTS"
 HERE = os.path.dirname(os.path.abspath(__file__))
 

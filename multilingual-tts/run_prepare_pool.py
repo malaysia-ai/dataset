@@ -18,6 +18,11 @@ import os, sys, re, json, time, signal, subprocess
 from collections import deque
 import click
 
+# Xet is the slow/hanging path for HfFileSystem parquet reads from these
+# China-region nodes (~100KB/s / stalls); the classic CDN path is fast. Force it
+# off for the runner and every child process (launch() copies os.environ).
+os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 

@@ -78,13 +78,45 @@ python3 -u run_prepare_pool.py --list tasks.json --workers 5 \
 - Validated: 5 datasets (km/tw/ko/es/ko-ja) concurrently -> 5 ok / 0 fail, each
   with parquet + audio zip + neucodec zip on HF.
 
-### Remote run (GPU box)
+### Remote run — multi-node (distribute the work)
 
-`ssh -i scicom -p 1024 root@8.222.165.68`, work in `/share` (8× H20). Deps that
-needed fixing there: `faiss-cpu`, `neucodec`, titanet-vectors-fp16, and aligning
-`torchaudio`/`torchvision` to `torch 2.9.1+cu128` (`--no-deps`). No `zip` binary —
-`prepare.py` uses `shutil.make_archive`. First validated dataset: `Lingua_Libre_br`
-(Breton, 3086 clips).
+Two 8×H20 nodes, same IP different SSH port, **separate `/share`** (no shared
+storage), key `scicom`:
+- **Node A**: `ssh -i scicom -p 1024 root@8.222.165.68` — system Python works
+  (`torch 2.9.x+cu130`), run `python3` directly.
+- **Node B**: `ssh -i scicom -p 1023 root@8.222.165.68` — system Python is
+  externally-managed (PEP 668) AND its NGC torch ABI breaks pip torchaudio, so use
+  a **uv venv**: `/share/venv/bin/python`.
+
+Distribution = **partition the task list** (separate `/share` => no auto-coordination):
+```bash
+python3 -c "import json;t=json.load(open('tasks_all.json'));json.dump(t[0::2],open('tasks_A.json','w'));json.dump(t[1::2],open('tasks_B.json','w'))"
+```
+Even/odd split keeps each node's big/small mix balanced (tasks_all is small-first).
+Each node: copy token + scripts + its tasks file, **reconstruct checkpoints from
+HF** (a dataset is done if it has both a `<name>/…parquet` config and a
+`<name>_audio*.zip`), then run its pool. No overlap, each skips its done half.
+
+Per-node resume command (Node B swap `python3`->`/share/venv/bin/python`):
+```bash
+nohup python3 -u run_prepare_pool.py --list tasks_A.json --workers 8 \
+  --gpus 0,1,2,3,4,5,6,7 --min-free-gb 10 --extract-cores 16 \
+  --job-timeout 43200 --workdir /share > pool_all.log 2>&1 &
+```
+
+Gotchas learned the hard way:
+- Instances get **recycled** (new host key + wiped `/share` + lost deps/token).
+  Rebootstrap: clear `~/.ssh/known_hosts` entry, reinstall deps, re-copy
+  token/scripts/tasks, reconstruct checkpoints from HF. The pushed datasets on HF
+  are the real progress; local checkpoints are just skip-stubs.
+- **pypi.org is throttled (~20-60 KB/s) on these Alibaba nodes**; the **Aliyun
+  mirror is fast (~2.6 MB/s)**: `uv pip install --index-url https://mirrors.aliyun.com/pypi/simple/ ...`.
+- Install torch + the rest in **one pinned resolution** (`torch==2.9.0` etc. pinned)
+  so an unpinned dep doesn't drag torch to a version with unsatisfiable
+  `cuda-toolkit`/`nvidia-*` deps.
+- No `zip` binary — `prepare.py` uploads via `shutil`/`zipfile` (chunked >5GB).
+- `pkill -f <pattern>` self-kills the SSH shell (its own cmdline matches); kill by
+  PID, or use the `[p]attern` trick.
 
 ## Column conventions (from `prepare/`)
 

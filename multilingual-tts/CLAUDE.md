@@ -109,8 +109,17 @@ Gotchas learned the hard way:
   Rebootstrap: clear `~/.ssh/known_hosts` entry, reinstall deps, re-copy
   token/scripts/tasks, reconstruct checkpoints from HF. The pushed datasets on HF
   are the real progress; local checkpoints are just skip-stubs.
+- **`HF_HUB_DISABLE_XET=1` is REQUIRED** on these nodes: Xet-backed parquet read
+  via HfFileSystem stalls/crawls (~100 KB/s, 60s+ hangs) so extract grinds to a
+  halt; the classic CDN path is fast (same read: 60s+ -> 6.4s). It's set
+  automatically in `run_prepare_pool.py` + `prepare.py` (`os.environ.setdefault`),
+  but also export it for any manual hf download. (`hf_hub_download` itself is fine
+  either way; it's specifically HfFileSystem that stalls on Xet.)
 - **pypi.org is throttled (~20-60 KB/s) on these Alibaba nodes**; the **Aliyun
   mirror is fast (~2.6 MB/s)**: `uv pip install --index-url https://mirrors.aliyun.com/pypi/simple/ ...`.
+  Aliyun also mirrors pytorch wheels: `https://mirrors.aliyun.com/pytorch-wheels/<cuXXX>/`.
+- **HuggingFace download throughput fluctuates** from these nodes; with Xet
+  disabled it's been fine (15-20 MB/s via the CDN). Aliyun/China hosts ~2.8 MB/s.
 - Install torch + the rest in **one pinned resolution** (`torch==2.9.0` etc. pinned)
   so an unpinned dep doesn't drag torch to a version with unsatisfiable
   `cuda-toolkit`/`nvidia-*` deps.

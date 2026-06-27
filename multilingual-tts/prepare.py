@@ -148,6 +148,56 @@ def extract_shard(task):
     return out
 
 
+def stage_extract_metadata(repo, name, audio_dir, meta_path, max_samples):
+    """Audiofolder + metadata.csv (file_name + transcription) -> mono mp3 + rows.
+    For repos datasets-lib mis-loads as label-only (e.g. BibleTTS Ewe)."""
+    import csv as csvmod, soundfile as sf, librosa
+    from huggingface_hub import snapshot_download
+    os.makedirs(audio_dir, exist_ok=True)
+    local = snapshot_download(repo, repo_type="dataset",
+                              allow_patterns=["*.csv", "*.mp3", "*.wav", "*.flac", "*.ogg"])
+    with open(os.path.join(local, meta_path), encoding="utf-8", errors="ignore") as fh:
+        rd = csvmod.DictReader(fh)
+        cols = rd.fieldnames or []
+        fn_col = next((c for c in cols if c.lower() in
+                       ("file_name", "filename", "path", "audio", "file", "audio_filepath")), None)
+        text_col = next((c for c in cols if c.lower() in TEXT_NAMES), None) or \
+            next((c for c in cols if c != fn_col and not is_id_name(c)
+                  and any(k in c.lower() for k in TEXT_SUBSTR)), None)
+        if not fn_col or not text_col:
+            print(f"[extract] metadata.csv cols {cols} -> no file/text mapping; skip")
+            return None
+        meta_dir = os.path.dirname(os.path.join(local, meta_path))
+        rows, idx = [], 0
+        for row in rd:
+            t = (row.get(text_col) or "").strip()
+            af = row.get(fn_col)
+            if len(t) < 2 or not af:
+                continue
+            src = os.path.join(meta_dir, af)
+            if not os.path.exists(src):
+                src = os.path.join(local, af)
+            if not os.path.exists(src):
+                continue
+            try:
+                y, sr = librosa.load(src, sr=None, mono=True)
+                if y.shape[0] < 10000:
+                    continue
+                fn = os.path.join(audio_dir, f"{name}-{idx}.mp3")
+                if not os.path.exists(fn):
+                    sf.write(fn, y, sr)
+                rows.append({"audio_filename": fn, "text": t})
+                idx += 1
+                if idx % 500 == 0:
+                    print(f"[extract] metadata {idx} clips...")
+                if max_samples and idx >= max_samples:
+                    break
+            except Exception:
+                continue
+    print(f"[extract] metadata.csv ({fn_col}/{text_col}): {len(rows)} clips -> {audio_dir}/")
+    return rows
+
+
 def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
                   max_samples, cores=16, min_free_gb=50):
     """Parquet -> mono mp3, parallel across row groups (so even a single big shard
@@ -165,17 +215,27 @@ def stage_extract(repo, config, name, audio_col, text_col, speaker_col,
         print(f"[extract] resume: {len(rows)} rows already extracted")
         return rows, speaker_col
 
+    audio_dir = f"{name}_audio"
+    os.makedirs(audio_dir, exist_ok=True)
+    repo_files = HfApi().list_repo_files(repo, repo_type="dataset")
+    parquet = sorted(f for f in repo_files if f.endswith(".parquet"))
+    meta_csv = [f for f in repo_files if f.lower().endswith("metadata.csv")]
+
+    # audiofolder + metadata.csv (datasets-lib mis-loads as label-only) -> read csv
+    if not parquet and meta_csv:
+        rows = stage_extract_metadata(repo, name, audio_dir, meta_csv[0], max_samples)
+        if rows:
+            json.dump(rows, open(rows_json, "w"), ensure_ascii=False)
+            json.dump([r["audio_filename"] for r in rows], open(audio_list_json, "w"))
+            return rows, None
+        print("[extract] metadata path yielded nothing; falling through to builder")
+
     builder = load_dataset_builder(repo, config)
     features = builder.info.features
     audio_col, text_col, speaker_col = detect_cols(features, audio_col, text_col, speaker_col)
     print(f"[extract] cols -> audio={audio_col} text={text_col} speaker={speaker_col}")
     if not audio_col or not text_col:
         raise SystemExit(f"could not detect audio/text columns from {list(features)}")
-    audio_dir = f"{name}_audio"
-    os.makedirs(audio_dir, exist_ok=True)
-
-    parquet = sorted(f for f in HfApi().list_repo_files(repo, repo_type="dataset")
-                     if f.endswith(".parquet"))
     try:
         cfgs = get_dataset_config_names(repo)
     except Exception:

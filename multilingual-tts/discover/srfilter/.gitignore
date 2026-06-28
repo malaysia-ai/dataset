@@ -1,0 +1,6 @@
+.env
+.venv/
+srenv/
+pod.json
+__pycache__/
+*.jsonl
